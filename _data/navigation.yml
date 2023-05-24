@@ -1,0 +1,11 @@
+- name: Past Voyages
+  link: /voyages/
+  dropdown: 
+    - name: Understanding Anambas - May 2023
+      link: /voyages/2023Anambas/
+- name: Blog
+  link: /blog/
+- name: Gallery
+  link: /gallery/
+- name: Sponsors
+  link: /sponsors/
