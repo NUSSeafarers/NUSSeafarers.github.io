@@ -13,7 +13,6 @@ hero_height: small
 
 ## Documents
 
-- [Example Blog Post]({{ site.baseurl }}{% link _posts/2023-05-24-example-blog-post.markdown %}), by Gu Zhenhao.
 
 ## Gallery
 

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="content">
+
+    <p style="text-align: right; color: #003D7C; font-weight: bold;">Published on {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}
+        {% if page.source_link %}
+            (<a href="{{ page.source_link }}">Source</a>)
+        {% endif %}
+    </p>
+    <br>
+    {{ content }}
+</div>
+
+<div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}
+
+{% if page.series %}
+    {% include series.html %}
+{% endif %}

@@ -55,7 +55,7 @@ html { background-color: white; font-size: 16px; -moz-osx-font-smoothing: graysc
 
 article, aside, figure, footer, header, hgroup, section { display: block; }
 
-body, button, input, optgroup, select, textarea { font-family: "Montserrat", sans-serif; }
+body, button, input, optgroup, select, textarea { font-family: "Ubuntu"; }
 
 code, pre { -moz-osx-font-smoothing: auto; -webkit-font-smoothing: auto; font-family: consolas; }
 
@@ -2548,7 +2548,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .has-text-weight-bold { font-weight: 700 !important; }
 
-.is-family-primary { font-family: "Montserrat", sans-serif !important; }
+.is-family-primary { font-family: "Ubuntu" !important; }
 
 .is-family-secondary { font-family: "Montserrat", sans-serif !important; }
 

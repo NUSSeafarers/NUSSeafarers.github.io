@@ -1,8 +1,14 @@
-- name: Past Voyages
+- name: Voyages
   link: /voyages/
-  dropdown: 
-    - name: Understanding Anambas - May 2023
-      link: /voyages/2023Anambas/
+- name: Interests
+  link: /interests/
+  dropdown:
+    - name: Celestial Navigation
+      link: /interests/navigation/
+    - name: Sailing Basics
+      link: /interests/sailing/
+    - name: Southeast Asian Studies
+      link: /interests/seastudies/
 - name: Blog
   link: /blog/
 - name: Gallery
