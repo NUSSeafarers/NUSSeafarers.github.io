@@ -11,4 +11,4 @@ hero_height: small
 
 NUS Seafarers has organized a series of voyages, including the following:
 
-- [Understanding Anambas - May 2023]({{ site.baseurl }}{% link voyages/2023Anambas/index.markdown %})
+- [Understanding Anambas - May 2023]({{ site.baseurl }}{% link voyages/2023-05-understanding-anambas/index.markdown %})

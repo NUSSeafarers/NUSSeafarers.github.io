@@ -16,4 +16,4 @@ hero_height: small
 
 ## Gallery
 
-- [Album 1]({{ site.baseurl }}{% link voyages/2023Anambas/gallery.markdown %}), by Gu Zhenhao.
+- [Album 1]({{ site.baseurl }}{% link voyages/2023-05-understanding-anambas/gallery.markdown %}), by Gu Zhenhao.
