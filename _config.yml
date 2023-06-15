@@ -28,6 +28,7 @@ permalink: pretty
 favicon: /images/misc/favicon.png
 #twitter_username: jekyllrb
 github_username:  NUSSeafarers
+google_analytics: G-Q45JMDS6GW
 
 # Blog settings
 paginate: 5
