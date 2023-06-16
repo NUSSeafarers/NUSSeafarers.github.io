@@ -2,8 +2,8 @@
 # NUS Seafarers' Website
 
 
-<figure style="text-align:center;">
-  <img src="./images/misc/favicon.png" style="width:40%">
+<figure style="width:40%; margin-left: auto; margin-right: auto;">
+  <img src="./images/misc/favicon.png">
 </figure>
 
 This is the website documenting the voyages of NUS Seafarers, in which we showcase our best stories, photos, videos, and explore interesting topics like celestial navigation, SEA culture and sailing.
@@ -18,7 +18,7 @@ Please avoid posting personal information and other sensitive stuff on the websi
 
 ### General
 
-- Currently, our website is using [Bulma clean theme](https://github.com/chrisrhymes/bulma-clean-theme), a simple web theme supporting blogs, galleries and youtube videos. You may refer to [this website](https://www.csrhymes.com/bulma-clean-theme/docs/) for detailed documentation on how to create pages, add photos and videos, and many other functionalities.
+- Currently, our website is using [Bulma clean theme](https://github.com/chrisrhymes/bulma-clean-theme) by [C.S. Rhymes](https://github.com/chrisrhymes), a simple web theme supporting blogs, galleries and youtube videos. You may refer to [this website](https://www.csrhymes.com/bulma-clean-theme/docs/) for detailed documentation on how to create pages, add photos and videos, and many other functionalities.
 - Before you commit your contributions, you may build the website locally using jekyll. See [this documentation](https://jekyllrb.com/docs/) for details.
 
 
@@ -34,9 +34,10 @@ Creating blog posts is very simple and can be done on the GitHub website directl
   ---
   layout: post
   title:  "Voyage across the Equator"
-  subtitle: 2017 Across the Equator
+  subtitle: "2017 Across the Equator Voyage"
   author: "NUS News"
   date:   2017-01-29
+  toc: true
   hero_height: small
   hero_image: '/images/hero_images/moonrock_lagoon.jpg'
   source_link: 'https://news.nus.edu.sg/voyage-across-the-equator/'
@@ -52,6 +53,7 @@ Creating blog posts is very simple and can be done on the GitHub website directl
   - `subtitle` (optional): subtitle of the blog post.
   - `author`: author (or source) of the blog post.
   - `date`: date when the blog post was published in `YYYY-MM-DD` format.
+  - `toc` (optional): if set to true, a table of content will be automatically generated.
   - `hero_height`(optional): height of the [bulma hero](https://www.csrhymes.com/bulma-clean-theme/docs/pages/hero/). Recommended to set to `small` if `hero_image` is not set.
   - `hero_image` (optional): image to be put on the top of the page as the background of the title. Can be dimmed by adding another line `hero_darken: true`.
   - `source_link` (optional): link to the related websites.
@@ -74,9 +76,9 @@ Creating blog posts is very simple and can be done on the GitHub website directl
    To import an image in a page, you may copy the following code.
 
    ```html
-   <figure style="max-width: 800px; margin-left: auto; margin-right: auto;">
-   <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Infographic_VoyageMap-633264.jpg">
-   <figcaption>The week-long 400-kilometre voyage started off from Batam, with stops on the islands of Benan, Sebangka, Lingga, Gojong, before anchoring at Pulau Telang on their return.</figcaption>
+   <figure class="blog_figure">
+       <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Infographic_VoyageMap-633264.jpg">
+       <figcaption>The week-long 400-kilometre voyage started off from Batam, with stops on the islands of Benan, Sebangka, Lingga, Gojong, before anchoring at Pulau Telang on their return.</figcaption>
    </figure>
    ```
 

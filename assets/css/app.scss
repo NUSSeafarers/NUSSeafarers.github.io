@@ -10,3 +10,26 @@ $body-size: 17px;
 $family-code: consolas;
 // Import Main CSS file from theme
 @import "main";
+
+.hero {
+    .title,
+    .subtitle {
+        text-shadow: 1px 1px rgba($primary, 0.5);
+        animation: appear 1s;
+    }
+}
+
+div.highlight {
+    margin-bottom: 1rem;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
