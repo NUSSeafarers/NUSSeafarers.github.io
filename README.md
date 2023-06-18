@@ -2,7 +2,7 @@
 # NUS Seafarers' Website
 
 
-<figure style="width:40%; margin-left: auto; margin-right: auto;">
+<figure style="max-width:200px; margin: auto;">
   <img src="./images/misc/favicon.png">
 </figure>
 

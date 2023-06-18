@@ -2,7 +2,7 @@
 layout: post
 title:  "The Trip with the Gangsta Boys"
 subtitle: "with some reflections on the coming Clash of Civilizations"
-author: "Warren Blake"
+author: "Captain Warren Blake"
 hero_height: small
 image: '/images/captain_stories/gangsta-boys.jpg'
 published: true
