@@ -23,7 +23,7 @@ email: nus.seafarers@gmail.com
 #description: >- # this means to ignore newlines until "baseurl:"
 #    
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.nusseafarers.com" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://www.nusseafarers.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 favicon: /images/misc/favicon.png
 #twitter_username: jekyllrb
@@ -38,6 +38,11 @@ remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Additional voyage page
+collections:
+  voyages:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

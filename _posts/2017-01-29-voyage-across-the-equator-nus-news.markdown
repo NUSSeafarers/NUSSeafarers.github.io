@@ -5,14 +5,14 @@ hero_height: small
 author: "NUS News"
 date:   2017-01-29
 source_link: 'https://news.nus.edu.sg/voyage-across-the-equator/'
-image: '/images/voyages/2017-across-the-equator/kayaks-nus-news.png'
+image: '/images/voyages/2017-01-across-the-equator/kayaks-nus-news.png'
 published: true
 ---
 
 Nine NUS students kicked off their new year earlier this month by sailing off on a ship for a week-long voyage across the Equator.
 
-<figure>
-  <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Equator-3-614446.jpg" style="width:60%">
+<figure class="blog_figure">
+  <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Equator-3-614446.jpg">
   <figcaption>The schooner named Four Friends is 18 metres long, with 2 masts and up to 8 sails. (Photo: Kelman Chiang)</figcaption>
 </figure>
 
@@ -21,8 +21,8 @@ Sailing aboard an 18-metre schooner, the students, together with three NUS alumn
 
 
 
-<figure>
-  <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Infographic_VoyageMap-633264.jpg" style="width:60%">
+<figure class="blog_figure">
+  <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Infographic_VoyageMap-633264.jpg">
   <figcaption>The week-long 400-kilometre voyage started off from Batam, with stops on the islands of Benan, Sebangka, Lingga, Gojong, before anchoring at Pulau Telang on their return.</figcaption>
 </figure>
 
@@ -33,8 +33,8 @@ Darren Wee, Year 2 student from NUS Computing, recounted, "It was a sudden and v
 
 Jonathan Yeo, Year 1 student from NUS Business and a former national sailor, shared how the team scrambled to remove awnings and shelters on the deck as the rain beat down on them. "The wind was blowing the ship at an angle, going at 40 knots, or 80 kilometres per hour. Thankfully we were already anchored for the night, and our very experienced captain took charge, using the ship’s engine to counter the force of the wind".
 
-<figure>
-  <img src="/images/voyages/2017-across-the-equator/kayaks-nus-news.png" style="width:60%">
+<figure class="blog_figure">
+  <img src="/images/voyages/2017-01-across-the-equator/kayaks-nus-news.png">
   <figcaption>Aside from sailing the high seas, the students also took their kayaks down narrow channels to explore the mangrove areas on some of the islands. (Photo: Kelman Chiang)</figcaption>
 </figure>
 

@@ -13,7 +13,7 @@ hero_height: is-fullheight
 
 
 
-The NUS Seafarers are an initiative of the [National University of Singapore](https://nus.edu.sg/) and have so far organised [19 seafaring voyages]({{ site.baseurl }}{% link voyages/index.markdown %}) since January 2017, spending altogether **204 days at sea**, with **193 students and 30 alumni** on board. 
+The NUS Seafarers are an initiative of the [National University of Singapore](https://nus.edu.sg/) and have so far organised [19 seafaring voyages]({{ site.baseurl }}{% link voyages/index.html %}) since January 2017, spending altogether **204 days at sea**, with **193 students and 30 alumni** on board. 
 
 The participating students and alumni have unique experiences, immersing themselves in the culture, nature, economy and maritime infrastructure of **Indonesia, Thailand and the Philippines**, and becoming veritable seafarers along the way. The participating  alumni  enrich the voyages with their experience and advice to current students.
 

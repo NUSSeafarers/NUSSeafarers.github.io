@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="columns is-multiline">
+    <div class="column is-8" style="margin: auto">
+        {% include pagination.html %}
+    </div>
+    {% for post in paginator.posts %}
+    <div class="column is-8" style="margin: auto">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+    <div class="column is-8" style="margin: auto">
+        {% include pagination.html %}
+    </div>
+    <div class="column is-8" style="margin: auto">
+        {% include subscribe.html %}
+    </div>
+</div>
