@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+
+    <!-- Load marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #043249; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1 id="blog-title"></h1>
+    <div id="blog-content"></div>
+
+    <script>
+        // Get the markdown file name from the URL (?post=example)
+        const params = new URLSearchParams(window.location.search);
+        const post = params.get('post') || 'example'; // Default to "example.md"
+
+        // Fetch and render Markdown
+        fetch(`/blog-posts/${post}.md`)
+            .then(response => response.text())
+            .then(markdown => {
+                document.getElementById("blog-content").innerHTML = marked.parse(markdown);
+                
+                // Extract the first h1 title and use it as the page title
+                const firstHeading = document.querySelector("#blog-content h1");
+                if (firstHeading) {
+                    document.getElementById("blog-title").innerText = firstHeading.innerText;
+                }
+            })
+            .catch(error => {
+                document.getElementById("blog-content").innerHTML = "<p>Blog post not found.</p>";
+                console.error("Error loading post:", error);
+            });
+    </script>
+
+</body>
+</html>
