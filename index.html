@@ -16,55 +16,19 @@
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <div class="navbar-container">
+            <div class="nav-container">
                 
-                <!-- Left: Branding -->
-                <div class="navbar-left">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="/">NUS Seafarers</a>
-                    </div>
-                </div>
+                <!-- Branding -->
+                <a class="brand" href="/">NUS Seafarers</a>
 
-                <!-- Right: Menu & Hamburger -->
-                <div class="navbar-right">
-                    <ul class="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/blog-template.html?post=my-first-blog">Blog</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                    </ul>
-
-                    <!-- Hamburger Menu (Hidden in Desktop) -->
-                    <div class="hamburger-container">
-                        <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Toggle Menu">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Dropdown Menu (For Mobile) -->
-            <div class="dropdown-menu" id="dropdownMenu">
-                <a href="/" class="active">Home</a>
-                <a href="#">Voyages</a>
-                
-                <!-- Dropdown -->
-                <div class="navbar-dropdown">
-                    <a href="#" class="navbar-item dropdown-toggle" onclick="toggleDropdown()" aria-haspopup="true">
-                        Interests <span class="arrow">▼</span>
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="#" class="navbar-item">Celestial Navigation</a>
-                        <a href="#" class="navbar-item">Sailing Basics</a>
-                        <a href="#" class="navbar-item">Southeast Asian Studies</a>
-                    </div>
-                </div>
-                
-                <a href="#">Blog</a>
-                <a href="#">Gallery</a>
-                <a href="#">Sponsors</a>
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Voyages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Sponsors</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -73,15 +37,24 @@
     <main>
         <section class="hero">
             <div class="hero-body">
-                <div class="container">
-                    <h1 class="hero-title">NUS Seafarers</h1>
-                </div>
+                <h1 class="hero-title">NUS Seafarers</h1>
             </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <p>
+                    The NUS Seafarers are an initiative of the <a href="https://nus.edu.sg/">National University of Singapore</a> and have so far organised 19 seafaring voyages since January 2017, spending altogether <strong>204 days at sea</strong>, with <strong>193 students and 30 alumni</strong> on board.
+                </p>
+                <p>
+                    The participating students and alumni have unique experiences, immersing themselves in the culture, nature, economy and maritime infrastructure of <strong>Indonesia, Thailand and the Philippines</strong>, and becoming veritable seafarers along the way. The participating alumni enrich the voyages with their experience and advice to current students.
+                </p>
+                
+            </div>
+            
         </section>
     </main>
 
     <!-- Scripts -->
-    <script src="js/list_blog_posts.js"></script>
-    <script src="js/script.js"></script>  
+
 </body>
 </html>
