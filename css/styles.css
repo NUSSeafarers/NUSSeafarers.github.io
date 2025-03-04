@@ -1,0 +1,191 @@
+/* Theme Colors */
+:root {
+    /* Light Theme Colors */
+    --base: #ffffff; 
+    --surface: #f2f2f2; 
+    --overlay: #cccccc; 
+    --muted: #666666; 
+    --subtle: #333333; 
+    --text: #000000; 
+    --highlight: #cccccc; 
+  
+    --slow-transition-duration: 1s; 
+    --fast-transition-duration: 0.3s;
+    --transition-property: background-color, color; 
+}
+
+/* Dark Theme Colors */
+.dark-mode {
+    --base: #1f1f1f; 
+    --surface: #333333; 
+    --overlay: #666666; 
+    --muted: #999999; 
+    --subtle: #cccccc; 
+    --text: #ffffff; 
+    --highlight: #999999; 
+  
+    --slow-transition-duration: 1s;
+    --fast-transition-duration: 0.3s;
+    --transition-property: background-color, color; 
+  
+}
+
+body {
+    margin: 0;
+    background: var(--base);
+    color: var(--text);
+    padding: 0;
+}
+
+.navbar {
+    background: var(--base);
+    font: bold 14px/1.4 "Open Sans", Arial, sans-serif;
+    padding: 20px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container for brand & menu */
+.nav-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Brand Styling */
+.brand {
+    color: var(--text);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adds spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Links */
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: var(--text);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-menu a.active {
+    font-weight: bold;
+    color: var(--accent, var(--text)); 
+}
+
+.nav-menu a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Underline Effect */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--text);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Main Wrapper */
+main {
+    margin: 0;
+    background: var(--base);
+    color: var(--text);
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Page Wrapper: Groups Hero & Content */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 50vh; /* Adjustable height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--base);
+}
+
+.hero-body {
+    max-width: 800px;
+    width: 80%;
+}
+
+/* Content Section */
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background: var(--base);
+}
+
+/* Text Container */
+.container {
+    width: 60%;
+    max-width: 800px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+/* Responsive Video Embed */
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+iframe.has-ratio {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
