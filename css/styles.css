@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
 /* Theme Colors */
 :root {
     /* Light Theme Colors */
@@ -35,6 +38,7 @@ body {
     background: var(--base);
     color: var(--text);
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar {
@@ -203,14 +207,15 @@ main {
 
 /* Text Container */
 .container {
-    width: 60%;
-    max-width: 800px;
+    width: 70%;
+    /* max-width: 800px; */
     margin-bottom: 5%;
     text-align: center;
 }
 
 .container p {
     text-align: justify;
+
 }
 
 /* Responsive Video Embed */
