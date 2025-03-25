@@ -9,7 +9,7 @@
     --overlay: #cccccc;
     --muted: #666666;
     --subtle: #333333;
-    --text: #4a4a4a;
+    --text: #212427.;
     --highlight: #cccccc;
 
     --slow-transition-duration: 1s;
@@ -228,7 +228,7 @@ main {
 .left-content .container p {
     text-align: justify;
     color: var(--text);
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 400;
     line-height: 1.5;
     margin-top: 0;
@@ -291,7 +291,7 @@ figure {
     margin-bottom: 2rem;
     margin-top: 0;
     font-weight: 600;
-    color: black;
+    color: var(--text);
 }
 
 /* Sidebar nav */
@@ -384,7 +384,7 @@ figure {
 
 .footer-copy {
     font-size: 0.8rem;
-    color: #666;
+    color: var(--subtle);
 }
 
 /* Right side */
