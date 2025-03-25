@@ -216,10 +216,7 @@ main {
     padding-right: 5%;
 }
 
-.right-content {
-    flex: 2;
-    padding-left: 5%;
-}
+
 
 /* Text Container */
 .left-content .container {
@@ -234,6 +231,8 @@ main {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .left-content .container p:first-child:first-letter {
@@ -241,32 +240,47 @@ main {
     padding: 3px;
 }
 
+.article-img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    max-width: 700px; /* Limit the width */
+    margin: 0 auto 2rem auto; /* Center horizontally & add spacing */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Optional soft shadow */
+    height: auto;
+    object-fit: cover;
+}
+
 .video-container {
     position: relative;
-    width: 100%; 
-    padding-bottom: 56.25%; 
-    height: 0; 
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Make the iframe fill the container */
-    height: 100%; /* Make the iframe fill the container */
+    width: 100%;
+    height: 100%;
 }
 
 figure {
     display: block;
-    max-width: 100%; /* Prevents overflow */
-    margin: 0 auto; /* Centers the figure on the page */
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
+
 
 /* Right Sidebar Styling */
 .right-content {
-    flex: 3; 
+    flex: 3;
     padding-left: 20px;
     color: var(--text);
 }
@@ -274,9 +288,10 @@ figure {
 
 .sidebar-content h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
     font-weight: 600;
-    color: black;;
+    color: black;
 }
 
 /* Sidebar nav */
@@ -287,101 +302,105 @@ figure {
 }
 
 .sidebar-nav li {
-    margin-bottom: 12px;
+    margin-bottom: 1.5rem;
 }
 
 .sidebar-nav a {
     text-decoration: none;
     color: var(--text);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .sidebar-nav a:hover {
-    color: var(--highlight); 
+    color: var(--highlight);
 }
 
 /* Footer Styles */
 .footer {
     padding: 10px;
-  }
+}
 
-  .footer-body {
+.footer-body {
     background-color: #1a1a1a;
     padding: 60px 40px;
     border-radius: 20px;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer-left {
+}
+
+.footer-left {
     flex: 1.5;
-  }
-  
-  .footer-left h2 {
+}
+
+.footer-left h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: white;
-  }
-  
-  .footer-left p {
-    color: #ccc;
+}
+
+.footer-left p {
+    color: var(--surface);
     font-size: 1rem;
     margin-bottom: 20px;
-  }
-  
-  .footer-brand {
+}
+
+.footer-brand {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 20px;
-  }
-  
-  .footer-logo {
+}
+
+.footer-logo {
     width: 32px;
     height: 32px;
-  }
-  
-  .footer-nav {
+}
+
+.footer-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 30px;
-  }
-  
-  .footer-nav a {
-    color: #bbb;
+}
+
+.footer-nav a {
+    color: var(--surface);
     text-decoration: none;
     font-size: 0.95rem;
-  }
-  
-  .footer-nav a:hover {
+}
+
+.footer-nav a:hover {
     color: white;
-  }
-  
-  .footer-copy {
+}
+
+.footer-copy {
     font-size: 0.8rem;
     color: #666;
-  }
-  
-  /* Right side */
-  .footer-right {
+}
+
+/* Right side */
+.footer-right {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
-  }
-  
-  .get-started {
+}
+
+.footer-right h4 {
+    color: var(--surface);
+}
+
+
+.get-started {
     background: transparent;
     border: 1px solid #ccc;
     padding: 10px 20px;
@@ -390,53 +409,39 @@ figure {
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 30px;
-  }
-  
-  .get-started:hover {
+}
+
+.get-started:hover {
     background: #2c2c2c;
-  }
-  
-  .get-app p {
+}
+
+.get-app p {
     font-size: 0.9rem;
     margin-bottom: 10px;
     color: #ccc;
-  }
-  
-  .get-app img {
+}
+
+.get-app img {
     display: block;
     width: 130px;
     margin-bottom: 10px;
     border-radius: 6px;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #999;
     font-size: 1.2rem;
     transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: white;
-  }
-
-/* Responsive Video Embed */
-figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
 }
 
-iframe.has-ratio {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
+.social-icons a:hover {
+    color: white;
 }
 
 
@@ -454,13 +459,13 @@ iframe.has-ratio {
         flex-direction: column;
         align-items: center;
         text-align: center;
-      }
-    
-      .footer-right {
+    }
+
+    .footer-right {
         align-items: center;
-      }
-    
-      .social-icons {
+    }
+
+    .social-icons {
         justify-content: center;
-      }
+    }
 }
