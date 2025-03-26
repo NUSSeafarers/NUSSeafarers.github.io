@@ -9,7 +9,7 @@
     --overlay: #cccccc;
     --muted: #666666;
     --subtle: #333333;
-    --text: #212427.;
+    --text: #212427;
     --highlight: #cccccc;
 
     --slow-transition-duration: 1s;
@@ -244,10 +244,10 @@ main {
     display: block;
     max-width: 100%;
     width: 100%;
-    max-width: 700px; /* Limit the width */
-    margin: 0 auto 2rem auto; /* Center horizontally & add spacing */
-    border-radius: 16px; /* Rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Optional soft shadow */
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     height: auto;
     object-fit: cover;
 }
@@ -316,6 +316,67 @@ figure {
 .sidebar-nav a:hover {
     color: var(--highlight);
 }
+
+/* Blog Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns by default */
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    max-width: 350px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    text-decoration: none; 
+    color: inherit;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.blog-summary {
+    font-size: 0.9rem;
+    color: var(--subtle);
+    line-height: 1.5;
+}
+
+.blog-meta {
+    font-size: 0.8rem;
+    color: #999;
+    display: flex;
+    gap: 6px;
+}
+
 
 /* Footer Styles */
 .footer {
@@ -444,6 +505,12 @@ figure {
     color: white;
 }
 
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+    }
+}
 
 @media (max-width: 768px) {
     .content {
@@ -453,6 +520,10 @@ figure {
 
     .right-content {
         margin-top: 20px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-container {
