@@ -1,136 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Blog | NUS Seafarers</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="/images/misc/favicon.png">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="/images/misc/favicon.png" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Header -->
     <header>
-        <nav class="navbar">
-            <div class="nav-container">
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Branding -->
+          <a class="brand" href="/">NUS Seafarers</a>
 
-                <!-- Branding -->
-                <a class="brand" href="/">NUS Seafarers</a>
+          <!-- Navigation Menu -->
+          <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="/blog.html">Blog</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+          </ul>
 
-                <!-- Navigation Menu -->
-                <ul class="nav-menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a class="active" href="/blog.html">Blog</a></li>
-                    <li><a href="/gallery.html">Gallery</a></li>
-                </ul>
+          <!-- Mobile Hamburger -->
+          <div class="hamburger-menu">
+            <div class="menu-button" id="menuButton">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </div>
-        </nav>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a class="active" href="/">Home</a>
+              <a href="/blog.html">Blog</a>
+              <a href="/gallery.html">Gallery</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="hero">
-            <div class="blog-body">
-                <h1 class="blog-title">Blog</h1>
-                <h3>Documenting our Voyages.</h3>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="blog-grid">
-
-                    <a href="/blog/badas-riau-expedition.html" class="blog-card">
-                        <img src="/images/voyages/2025-badas-riau-expedition/pulau_pinang_seribu.jpg" alt="Blog Cover">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Badas-Riau Expedition</h3>
-                            <p class="blog-summary">
-                                Dawn breaks and the golden sun awakens a vast rolling ocean. The
-                                white sand bay painted in her beauty like a Van Goph, the forests...
-                            </p>
-                            <div class="blog-meta">
-                                <span>Badas-Riau</span>
-                                <span>•</span>
-                                <span>10 Jan 2025</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="/blog/experiencing-krakatoa.html" class="blog-card">
-                        <img src="/images/voyages/2018-02-recess-week-volcano-voyage/experiencing-krakatoa-report/student-at-rakata.jpg"
-                            alt="Blog Cover">
-                        <div class="blog-content">
-                            <h3 class="blog-title">Experiencing Krakatoa</h3>
-                            <p class="blog-summary">
-                                How might one fathom the vastness of the biggest explosion in human history, the
-                                Krakatoa eruption of 1883?
-                            </p>
-                            <div class="blog-meta">
-                                <span>Krakatoa</span>
-                                <span>•</span>
-                                <span>10 Jan 2025</span>
-                            </div>
-                        </div>
-                    </a>
-
-
+      <section class="hero">
+        <div class="blog-body">
+          <h1 class="blog-title">Blog</h1>
+          <h3>Documenting our Voyages.</h3>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="blog-grid">
+            <a href="/blog/badas-riau-expedition.html" class="blog-card">
+              <img
+                src="/images/voyages/2025-badas-riau-expedition/pulau_pinang_seribu.jpg"
+                alt="Blog Cover"
+              />
+              <div class="blog-content">
+                <h3 class="blog-title">Badas-Riau Expedition</h3>
+                <p class="blog-summary">
+                  Dawn breaks and the golden sun awakens a vast rolling ocean.
+                  The white sand bay painted in her beauty like a Van Goph, the
+                  forests...
+                </p>
+                <div class="blog-meta">
+                  <span>Badas-Riau</span>
+                  <span>•</span>
+                  <span>10 Jan 2025</span>
                 </div>
-            </div>
+              </div>
+            </a>
 
-        </section>
+            <a href="/blog/experiencing-krakatoa.html" class="blog-card">
+              <img
+                src="/images/voyages/2018-02-recess-week-volcano-voyage/experiencing-krakatoa-report/student-at-rakata.jpg"
+                alt="Blog Cover"
+              />
+              <div class="blog-content">
+                <h3 class="blog-title">Experiencing Krakatoa</h3>
+                <p class="blog-summary">
+                  How might one fathom the vastness of the biggest explosion in
+                  human history, the Krakatoa eruption of 1883?
+                </p>
+                <div class="blog-meta">
+                  <span>Krakatoa</span>
+                  <span>•</span>
+                  <span>10 Jan 2025</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-body">
-            <div class="footer-container">
-                <!-- Left section -->
-                <div class="footer-left">
-                    <h2>
-                        <span style="color: #EF7C00;">NUS</span> Seafarers
-                    </h2>
-                    <p>For any enquiry about future events, drop us a message at any of our social media or through the
-                        NUS Seafarers e-mail.</p>
+      <div class="footer-body">
+        <div class="footer-container">
+          <!-- Left section -->
+          <div class="footer-left">
+            <h2><span style="color: #ef7c00">NUS</span> Seafarers</h2>
+            <p>
+              For any enquiry about future events, drop us a message at any of
+              our social media or through the NUS Seafarers e-mail.
+            </p>
 
-                    <div class="footer-brand">
-                        <img src="\images\misc\favicon.png" alt="Logo" class="footer-logo">
-                    </div>
+            <div class="footer-brand">
+              <img
+                src="\images\misc\favicon.png"
+                alt="Logo"
+                class="footer-logo"
+              />
+            </div>
 
-                    <nav class="footer-nav">
-                        <a href="/">Home</a>
-                        <a href="/blog.html">Blog</a>
-                        <a href="/gallery.html">Gallery</a>
-                    </nav>
+            <nav class="footer-nav">
+              <a href="/">Home</a>
+              <a href="/blog.html">Blog</a>
+              <a href="/gallery.html">Gallery</a>
+            </nav>
 
-                    <p class="footer-copy">Copyright © 2025, NUS Seafarers. All Rights Reserved.</p>
-                </div>
+            <p class="footer-copy">
+              Copyright © 2025, NUS Seafarers. All Rights Reserved.
+            </p>
+          </div>
 
-                <!-- Right section -->
-                <div class="footer-right">
-                    <h4>Contact Us</h4>
-                    <button class="get-started">✉️ Email</button>
+          <!-- Right section -->
+          <div class="footer-right">
+            <h4>Contact Us</h4>
+            <button class="get-started">✉️ Email</button>
 
-                    <!-- <div class="get-app">
+            <!-- <div class="get-app">
                     <p>For any</p>
                     <img src="appstore.png" alt="App Store">
                     <img src="googleplay.png" alt="Google Play">
                   </div> -->
 
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
-
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>
