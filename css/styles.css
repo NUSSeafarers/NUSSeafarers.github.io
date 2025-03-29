@@ -526,6 +526,15 @@ figure {
         grid-template-columns: 1fr;
     }
 
+    .footer {
+        padding: 0;
+    }
+
+    .footer-body {
+        background-color: #1a1a1a;
+        border-radius: 0;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
