@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 20px;
-  height: 10px;
+  height: 12px;
   cursor: pointer;
   position: relative;
 }
@@ -149,13 +149,13 @@ body {
 
 /* Active state for cross animation */
 .menu-button.active .bar:nth-child(1) {
-  transform: translateY(4.5px) rotate(-45deg);
+  transform: translateY(5.5px) rotate(-45deg);
 }
 .menu-button.active .bar:nth-child(2) {
   opacity: 0;
 }
 .menu-button.active .bar:nth-child(3) {
-  transform: translateY(-4.5px) rotate(45deg);
+  transform: translateY(-5.5px) rotate(45deg);
 }
 
 /* Dropdown Menu */
