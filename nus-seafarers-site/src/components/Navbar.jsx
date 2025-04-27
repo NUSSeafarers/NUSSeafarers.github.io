@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "./HamburgerButton";
+import NavButton from "./NavButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,25 +27,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 m-0 p-0 list-none">
           {navItems.map((item) => (
-            <li key={item.name} className="relative group">
-              <Link
-                to={item.href}
-                className={`group uppercase tracking-[0.15em] px-5 py-4 relative inline-block font-bold text-[var(--text)] ${
-                  location.pathname === item.href
-                    ? "text-[var(--highlight)]"
-                    : ""
-                }`}
-              >
-                {item.name}
-                <span
-                  className={`absolute bottom-0 left-0 h-[2px] w-full bg-[var(--text)] transition-transform duration-300 origin-center transform ${
-                    location.pathname === item.href
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover:scale-x-100"
-                  }`}
-                />
-              </Link>
-            </li>
+            <NavButton key={item.name} name={item.name} href={item.href} />
           ))}
         </ul>
 

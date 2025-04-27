@@ -10,8 +10,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="m-2">
-      <footer className="bg-neutral-900 text-white py-10 px-6 md:px-20 rounded-2xl shadow-xl mx-auto">
+    <div className="m-4">
+      <footer className="bg-neutral-900 text-white py-10 px-6 md:px-20 rounded-2xl mx-auto">
         <div className="mx-auto grid md:grid-cols-2 gap-8">
           {/* Left Side */}
           <div>

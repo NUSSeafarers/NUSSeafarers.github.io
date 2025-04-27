@@ -1,5 +1,8 @@
+import heroImg from "../assets/images/hero_images/moonrock_lagoon.jpg";
+
 const Blog = () => {
-    return (
+  return (
+    <div className="max-w-7xl mx-auto px-4 md:px-8 py-6">
       <div className="p-6">
         <h1 className="text-3xl font-bold mb-4">Blog</h1>
         <p>
@@ -7,7 +10,8 @@ const Blog = () => {
           adventures here.
         </p>
       </div>
-    );
-  };
-  
-  export default Blog;
+    </div>
+  );
+};
+
+export default Blog;
