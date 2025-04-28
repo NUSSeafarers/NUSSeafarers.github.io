@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Logo from "./misc/Logo";
 
 const Footer = () => {
   const location = useLocation();
@@ -15,22 +16,17 @@ const Footer = () => {
         <div className="mx-auto grid md:grid-cols-2 gap-8">
           {/* Left Side */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">
-              <span className="text-orange-500">NUS</span> Seafarers
+            <h2 className="flex items-center gap-3 text-2xl font-bold mb-2">
+              <Logo size="w-8" />
+              <span>
+                <span className="text-orange-500">NUS</span> Seafarers
+              </span>
             </h2>
+
             <p className="text-sm text-gray-300 mb-4 max-w-md">
               For any enquiry about future events, drop us a message at any of
               our social media or through the NUS Seafarers e-mail.
             </p>
-
-            {/* Icon placeholder */}
-            <a href="#" className="inline-block mb-4">
-              <img
-                src="..\..\assets\images\new-logo-2025\NUS_Seafarers_logo_svg.svg"
-                alt="email icon"
-                className="w-6 h-6"
-              />
-            </a>
           </div>
 
           {/* Right Side */}

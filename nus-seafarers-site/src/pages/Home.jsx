@@ -1,22 +1,20 @@
 import HeroImage from "../components/HeroImage";
-import LatestBlogPosts from "../components/LatestBlogPosts";
+import MainContent from "../components/MainContent";
+import SideBar from "../components/SideBar";
 
 const Home = () => {
   return (
     <div className="m-4">
-			<HeroImage />
-			<div className="flex">
-				<div>
-					<h1 className="text-3xl font-bold mb-4">Welcome to NUS Seafarers</h1>
-					<p>
-						This is your home page. You can feature your mission, events, or
-						adventures here.
-					</p>
-				</div>
-				<div className="w-32">
-					<LatestBlogPosts />
-				</div>
-			</div>
+      <HeroImage />
+      <div className="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12">
+        {/* Main Section */}
+        <div>
+					<MainContent /> 
+        </div>
+
+        {/* Sidebar */}
+        <SideBar />
+      </div>
     </div>
   );
 };

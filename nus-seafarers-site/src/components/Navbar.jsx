@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import HamburgerButton from "./HamburgerButton";
 import NavButton from "./NavButton";
+import Logo from "./misc/Logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +15,14 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="bg-[var(--base)] text-[var(--text)] px-[10%] py-5 transition-colors duration-1000 z-50 relative">
+    <header className="bg-[var(--base)] text-[var(--text)] px-[10%] py-2 transition-colors duration-1000 z-50 relative">
       <nav className="flex justify-between items-center w-full">
         {/* Branding */}
         <Link
           to="/"
-          className="uppercase tracking-[0.15em] px-5 py-4 whitespace-nowrap font-bold text-[var(--text)]"
+          className="flex items-center gap-3 uppercase tracking-[0.15em] px-5 py-4 whitespace-nowrap font-bold text-[var(--text)]"
         >
+          <Logo size="w-8" />
           NUS Seafarers
         </Link>
 
