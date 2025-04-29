@@ -2,12 +2,14 @@ import ReactMarkdown from "react-markdown";
 import Quote from "../text/Quote";
 import Paragraph from "../text/Paragraph";
 import ImageWithCaption from "./ImageWithCaption";
+import PublishedText from "./PublishedText";
 
-const BlogTemplate = ({ title, date, content }) => (
+const BlogTemplate = ({ title, date, content, author }) => (
   <article className="max-w-4xl mx-auto p-6">
-    <h1 className="text-4xl font-bold mb-4">{title}</h1>
-    <p className="text-gray-500 mb-8">{date}</p>
+    <h1 className="text-4xl font-bold my-16">{title}</h1>
+    <PublishedText date={date} author={author} />
     <div className="prose prose-lg max-w-none">
+
       <ReactMarkdown
         components={{
           blockquote: ({ node, children }) => {

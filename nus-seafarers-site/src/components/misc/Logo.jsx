@@ -5,7 +5,7 @@ const Logo = ({ size = "w-32" }) => {
     <div className="flex items-center gap-2">
       <Link to="/">
         <img
-          src="NUS_Seafarers_logo.svg"
+          src="/NUS_Seafarers_logo.svg"
           alt="NUS Seafarers Logo"
           className={`${size} h-auto object-contain`}
         />

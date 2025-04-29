@@ -25,6 +25,7 @@ const BlogPost = () => {
       title={post.title}
       date={post.date}
       content={content}
+      author={post.author}
     />
   );
 };

@@ -14,10 +14,10 @@ const HeroImage = () => {
 
         {/* Text Content */}
         <div className="absolute inset-0 flex flex-col justify-center md:justify-left items-center text-center p-6 md:p-12">
-          <h1 className="text-white font-extrabold mb-4 text-[clamp(2rem,5vw,4rem)] drop-shadow-lg leading-tight">
+          <h1 className="text-white font-extrabold mb-4 text-[clamp(2rem,5vw,4rem)] drop-shadow-lg leading-tight animate-fadeInUp">
             NUS Seafarers
           </h1>
-          <p className="text-white text-[clamp(1rem,2.5vw,1.5rem)] font-light drop-shadow-md max-w-2xl">
+          <p className="text-white text-[clamp(1rem,2.5vw,1.5rem)] font-light drop-shadow-md max-w-2xl animate-fadeInUp delay-300">
             To sail is to live.
           </p>
         </div>
