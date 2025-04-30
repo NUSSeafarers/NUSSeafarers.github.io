@@ -10,6 +10,7 @@ const posts = [
     slug: "badas-riau-expedition",
     date: "January 2, 2025",
     author: "Lewis",
+    link: "",
     thumbnail: "/images/voyages/2025-01-badas-riau/pulau_pinang_seribu.jpg", // Fill properly
     summary:
       "Sailing through the rich waters of Riau, discovering remote island communities and breathtaking coastlines.",
@@ -20,7 +21,8 @@ const posts = [
     title: "Understanding Anambas",
     slug: "understanding-anambas",
     date: "May, 2023",
-    author: "Nigel Teo",
+    author: "NUS News",
+    link: "",
     thumbnail:
       "/images/voyages/2023-05-understanding-anambas/Sylvain-Pulling-Kayak-Island.jpg",
     summary:
@@ -33,6 +35,7 @@ const posts = [
     slug: "experiencing-krakatoa",
     date: "March 12, 2018",
     author: "Prof Martin Henz and Dr John van Wyhe",
+    link: "",
     thumbnail:
       "/images/voyages/2018-02-recess-week-volcano-voyage/experiencing-krakatoa-report/student-at-rakata.jpg", // Fill properly
     summary:
@@ -45,6 +48,7 @@ const posts = [
     slug: "sail-to-anambas",
     date: "June 1, 2017",
     author: "NUS News",
+    link: "",
     thumbnail:
       "/images/voyages/2017-04-sail-to-anambas/climbing-group-photo.jpg", 
     summary:
@@ -57,6 +61,7 @@ const posts = [
     slug: "voyage-across-the-equator",
     date: "January 29, 2017",
     author: "NUS News",
+    link: "",
     thumbnail:
       "/images/voyages/2017-01-across-the-equator/map-south-china-sea.jpg", 
     summary:
