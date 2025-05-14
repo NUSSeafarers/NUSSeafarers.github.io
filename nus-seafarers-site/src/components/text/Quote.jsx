@@ -7,7 +7,7 @@ const Quote = ({quoteText, author}) => {
 			</blockquote>
 
 			{/* Author Footer */}
-			<div className="mt-8 mb-16 text-sm text-gray-500">
+			<div className="mt-8 mb-12 text-sm text-gray-500">
 				— {author}
 			</div>
 		</div>
