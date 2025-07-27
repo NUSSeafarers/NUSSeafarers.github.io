@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9aef5a94.css",
+    "main.js": "/static/js/main.43a6056d.js",
+    "static/js/453.c70f6421.chunk.js": "/static/js/453.c70f6421.chunk.js",
+    "static/media/understanding-anambas.md": "/static/media/understanding-anambas.d303f96071dbe3d9b1fe.md",
+    "static/media/experiencing-krakatoa.md": "/static/media/experiencing-krakatoa.651445f0f28ab0098fa5.md",
+    "static/media/voyage-across-the-equator.md": "/static/media/voyage-across-the-equator.6653b0086f30aeadeabf.md",
+    "static/media/sail-to-anambas.md": "/static/media/sail-to-anambas.cb0f942de527edcca022.md",
+    "static/media/badas-riau-expedition.md": "/static/media/badas-riau-expedition.1e83f25361dd0ff840d8.md",
+    "index.html": "/index.html",
+    "main.9aef5a94.css.map": "/static/css/main.9aef5a94.css.map",
+    "main.43a6056d.js.map": "/static/js/main.43a6056d.js.map",
+    "453.c70f6421.chunk.js.map": "/static/js/453.c70f6421.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9aef5a94.css",
+    "static/js/main.43a6056d.js"
+  ]
+}
