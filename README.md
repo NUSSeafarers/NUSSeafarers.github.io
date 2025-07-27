@@ -1,96 +1,127 @@
+# 🧭 NUS Seafarers Website
 
-# NUS Seafarers' Website
+This is the official website for **NUS Seafarers**, built with **React**, styled with **Tailwind CSS**, and deployed on **GitHub Pages**.
+
+## 🛠️ Tech Stack
+
+- React
+- Tailwind CSS
+- React Router
+- Markdown rendering with `react-markdown`
+- GitHub Pages for static deployment
+- `gh-pages` for auto-deploy
+
+---
+
+## 🚀 Deployment Instructions
+
+To build and deploy the site to GitHub Pages:
+
+```bash
+npm run deploy
+````
+
+This will:
+
+1. Run `npm run build` to generate a static `build/` folder
+2. Push the build to the `gh-pages` branch
+3. Update the live site at:
+   📍 [https://nusseafarers.github.io/nus-seafarers-site](https://nusseafarers.github.io/nus-seafarers-site)
+
+Make sure your GitHub Pages settings point to the `gh-pages` branch at root.
+
+---
+
+## 📝 Adding a New Blog Page (Markdown-Based)
+
+### 1. Add your content as a markdown file
+
+Create a new file inside:
+
+```
+src/content/
+```
+
+Example:
+
+```
+src/content/2024-04-voyage-to-badas.md
+```
 
 
-<figure style="max-width:200px; margin: auto;">
-  <img src="./images/misc/favicon.png">
-</figure>
+### 2. Register the post in `posts.js`
 
-This is the website documenting the voyages of NUS Seafarers, in which we showcase our best stories, photos, videos, and explore interesting topics like celestial navigation, SEA culture and sailing.
+Open:
 
-## Contribution
+```
+src/components/blog/posts.js
+```
 
-We welcome contributions and suggestions from all voyagers. Whether you are a programmer or not, you can always write your blog post, report bugs, or make suggestions under the [Issues](https://github.com/NUSSeafarers/NUSSeafarers.github.io/issues) page of this repository.
+Then import and add your new post to the `posts` array:
 
-If you want to add blog posts by yourself, please [contact our team](mailto:guzh@comp.nus.edu.sg) or ask in the telegram group, so that we can add you into the [NUS Seafarers](https://github.com/NUSSeafarers) organization on GitHub.
+```js
+import taiwanVoyage from '../../content/2024-04-voyage-to-badas.md';
 
-Please avoid posting personal information and other sensitive stuff on the website.
+export const posts = [
+  {
+    title: "Badas-Riau Expedition",
+    slug: "badas-riau-expedition",
+    date: "January 2, 2025",
+    author: "Lewis",
+    link: "",
+    thumbnail: "/images/voyages/2025-01-badas-riau/pulau_pinang_seribu.jpg", // Fill properly
+    summary:
+      "Sailing through the rich waters of Riau, discovering remote island communities and breathtaking coastlines.",
+    meta: "Riau Voyage",
+    content: badasContent,
+  },
+  // add more posts here
+];
+```
 
-### General
+> Make sure the `slug` matches your URL routing if you're using dynamic routes.
 
-- Currently, our website is using [Bulma clean theme](https://github.com/chrisrhymes/bulma-clean-theme) by [C.S. Rhymes](https://github.com/chrisrhymes), a simple web theme supporting blogs, galleries and youtube videos. You may refer to [this website](https://www.csrhymes.com/bulma-clean-theme/docs/) for detailed documentation on how to create pages, add photos and videos, and many other functionalities.
-- Before you commit your contributions, you may build the website locally using jekyll. See [this documentation](https://jekyllrb.com/docs/) for details.
+---
 
+## 🧼 Maintenance Tips
 
+* Always commit and push your changes to the `main` branch
+* To trigger a new deploy:
 
-### Adding blog posts
-
-Creating blog posts is very simple and can be done on the GitHub website directly.
-
-- **Step 1**: Create a markdown file under the [`/_posts`](https://github.com/NUSSeafarers/NUSSeafarers.github.io/tree/main/_posts) directory, with the file name in the syntax of `YYYY-MM-DD-title-author.markdown`.
-- **Step 2**: At the beginning of the markdown file, add the configurations as the following:
-
+  ```bash
+  npm run deploy
   ```
-  ---
-  layout: post
-  title:  "Voyage across the Equator"
-  subtitle: "2017 Across the Equator Voyage"
-  author: "NUS News"
-  date:   2017-01-29
-  toc: true
-  hero_height: small
-  hero_image: '/images/hero_images/moonrock_lagoon.jpg'
-  source_link: 'https://news.nus.edu.sg/voyage-across-the-equator/'
-  image: '/images/voyages/2017-across-the-equator/kayaks-nus-news.png'
-  published: true
-  ---
+* If the site still shows the old content after deploying, hard-refresh or wait \~60 seconds due to GitHub Pages caching
+* Keep the `homepage` field in `package.json` correctly set:
+
+  ```json
+  "homepage": "https://nusseafarers.github.io/"
   ```
 
-  We summarize the common parameters as follows:
+---
 
-  - `layout`: should be set to `post` for all blog posts.
-  - `title`: title of the blog post.
-  - `subtitle` (optional): subtitle of the blog post.
-  - `author`: author (or source) of the blog post.
-  - `date`: date when the blog post was published in `YYYY-MM-DD` format.
-  - `toc` (optional): if set to true, a table of content will be automatically generated.
-  - `hero_height`(optional): height of the [bulma hero](https://www.csrhymes.com/bulma-clean-theme/docs/pages/hero/). Recommended to set to `small` if `hero_image` is not set.
-  - `hero_image` (optional): image to be put on the top of the page as the background of the title. Can be dimmed by adding another line `hero_darken: true`.
-  - `source_link` (optional): link to the related websites.
-  - `image` (optional): image that is shown on the [`blogs`](https://nusseafarers.github.io/blog/) webpage.
-  - `published`: should be set to `true` to be visible on the website.
-  
+## 📁 Project Structure Overview
 
-  Please refer to [this documentation](https://www.csrhymes.com/bulma-clean-theme/docs/posts/creating-a-post/) for more options.
+```
+nus-seafarers-site/
+├── public/
+│   └── index.html (customized head and title)
+├── src/
+│   ├── content/         ← Markdown blog content
+│   ├── components/
+│   │   └── blog/
+│   │       └── posts.js ← Register markdown posts here
+│   └── App.js           ← React app entry point
+├── package.json
+```
 
-- **Step 3**: Write your blog post below the configuration. See [this post](./_posts/2017-01-29-voyage-across-the-equator-nus-news.markdown) for an example.
+---
 
-- **Step 4**: Commit your blog post to the `main` branch and the website should update in a few minutes.
+## 💬 Questions?
 
-### FAQ
+If you run into deployment or routing issues, feel free to check:
 
-1. **Q**: How can we add our own images?
-   
-   **A**: please add all images under the [`/images/`](./images/) directory. For images of individual voyages, put them under separate subdirectories under `/images/voyages`.
+* [GitHub Pages Docs](https://docs.github.com/en/pages)
+* [Create React App Deployment Guide](https://create-react-app.dev/docs/deployment/)
 
-   To import an image in a page, you may copy the following code.
-
-   ```html
-   <figure class="blog_figure">
-       <img src="https://s3.eu-west-1.amazonaws.com/presspage-production-content/uploads/2580/Infographic_VoyageMap-633264.jpg">
-       <figcaption>The week-long 400-kilometre voyage started off from Batam, with stops on the islands of Benan, Sebangka, Lingga, Gojong, before anchoring at Pulau Telang on their return.</figcaption>
-   </figure>
-   ```
-
-   where the link to the image (online or local) should be put after `img src=`, the caption (optional) should be written between `<figcaption>`, and the figure size can be adjusted by modifying the `max-width` parameter.
-
-
-1. **Q**: How to use custom fonts?
-   
-   **A**: You may select font families in [Google fonts](https://fonts.google.com/?preview.text=NUS%20Seafarers&preview.text_type=custom) (by clicking the `+` signs on the right of individual styles), then press the `View Selected Families` button on the top right of the webpage. Under the `Use on the web` section, copy the line of code starting with `@import url(...)` into [`/assets/css/app.scss`](./assets/css/app.scss). You may now use the font by adding
-
-   ```css
-   font-family: 'Name of the new font';
-   ```
-
-   in the CSS style.
+---
