@@ -1,8 +1,3 @@
-Here’s a clean and clear `README.md` for your project that documents how to maintain and extend your React + GitHub Pages site, including how to add new content in markdown:
-
----
-
-````markdown
 # 🧭 NUS Seafarers Website
 
 This is the official website for **NUS Seafarers**, built with **React**, styled with **Tailwind CSS**, and deployed on **GitHub Pages**.
