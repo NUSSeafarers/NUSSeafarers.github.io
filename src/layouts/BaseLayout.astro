@@ -1,18 +1,21 @@
 ---
-const { title = 'Untitled Page' } = Astro.props;
+import "../styles/global.css";
+
+const { title = "NUS Seafarers", description = "Exploring the seas of knowledge." } = Astro.props;
+const { default: children } = Astro.slots;
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/NUS_Seafarers_logo.svg" />
   </head>
-  <body class="font-sans bg-white text-gray-900">
-    <slot name="header" />
-    <main class="p-4">
-      <slot /> <!-- page content goes here -->
+  <body class="bg-white text-gray-900 min-h-screen font-sans antialiased">
+    <main class="px-4 py-8">
+      <slot />
     </main>
-    <slot name="footer" />
   </body>
 </html>
