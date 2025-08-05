@@ -1,7 +1,12 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/navbarcomponents/Navbar";
+import Footer from "../components/footercomponent/Footer";
 
-const { title = "NUS Seafarers", description = "Exploring the seas of knowledge." } = Astro.props;
+const {
+  title = "NUS Seafarers",
+  description = "Exploring the seas of knowledge.",
+} = Astro.props;
 const { default: children } = Astro.slots;
 ---
 
@@ -11,11 +16,21 @@ const { default: children } = Astro.slots;
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/NUS_Seafarers_logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-white text-gray-900 min-h-screen font-sans antialiased">
-    <main class="px-4 py-8">
+  <body
+    class="min-h-screen flex flex-col bg-gradient-to-b from-white to-sky-50 text-gray-900 font-sans antialiased"
+  >
+    <Navbar client:load />
+
+    <main class="flex-grow px-4 py-8">
       <slot />
     </main>
+
+    <Footer client:load />
   </body>
 </html>
