@@ -1,12 +1,31 @@
 import { useState } from "react";
 import NavButton from "./NavButton";
 import HamburgerButton from "./HamburgerButton";
+import MobileDropdown from "./MobileDropdown";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "About Us", href: "/about" },
+  {
+    label: "Blog",
+    href: "/blog",
+    children: [
+      { label: "Voyages", href: "/blog/voyages" },
+      { label: "Sailing", href: "/blog/sailing" },
+      { label: "Sustainability", href: "/blog/sustainability" },
+    ],
+  },
+  {
+    label: "Gallery",
+    href: "/gallery",
+  },
+  {
+    label: "About Us",
+    href: "/about",
+    children: [
+      { label: "Our Story", href: "/about/story" },
+      { label: "Our Team", href: "/about/team" },
+    ],
+  },
 ];
 
 export default function NavMenu() {
@@ -19,7 +38,12 @@ export default function NavMenu() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8 text-sm font-bold uppercase text-[#002147]">
           {navItems.map((item) => (
-            <NavButton key={item.href} name={item.label} href={item.href} />
+            <NavButton
+              key={item.href}
+              name={item.label}
+              href={item.href}
+              children={item.children}
+            />
           ))}
         </ul>
 
@@ -28,24 +52,11 @@ export default function NavMenu() {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      <div
-        className={`absolute right-0 top-full mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md p-4 space-y-2 text-sm font-bold uppercase text-neutral-900 transition-all duration-300 transform ${
-          isOpen
-            ? "opacity-100 visible translate-y-0"
-            : "opacity-0 invisible -translate-y-2"
-        } md:hidden`}
-      >
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="block hover:text-blue-600"
-            onClick={() => setIsOpen(false)} // close menu when clicked
-          >
-            {item.label}
-          </a>
-        ))}
-      </div>
+      <MobileDropdown
+        isOpen={isOpen}
+        navItems={navItems}
+        onClose={() => setIsOpen(false)}
+      />
     </div>
   );
 }
