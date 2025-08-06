@@ -1,7 +1,9 @@
+import Logo from "../Logo";
+
 const LogoTitle = () => {
   return (
-    <div className="flex items-center gap-3">
-      <img src="/favicon.svg" alt="Logo" className="w-8 h-8" />
+    <a href="/" className="flex items-center gap-3 no-underline">
+      <Logo />
       <span
         className="
           text-l
@@ -14,7 +16,7 @@ const LogoTitle = () => {
       >
         NUS Seafarers
       </span>
-    </div>
+    </a>
   );
 };
 

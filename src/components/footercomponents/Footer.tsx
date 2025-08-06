@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Logo from "../Logo";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -31,6 +32,7 @@ const Footer = () => {
           {/* Left Section */}
           <div>
             <h2 className="flex items-center gap-3 text-4xl font-bold mb-2">
+              <Logo />
               <span>
                 <span className="text-orange-500">NUS</span> Seafarers
               </span>
