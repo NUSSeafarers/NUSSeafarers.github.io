@@ -9,4 +9,70 @@ import HeroSection from "../../components/HeroSection.astro";
 		subtitle="Stories from our voyages, our love for sailing, and our thoughts on building a more sustainable future."
 		path="blog"
 	/>
+
+	<section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+		<div class="text-3xl md:text-4xl lg:text-5xl pb-8">What we do</div>
+		<div class="flex justify-between items-center mb-8">
+			<div class="flex items-center gap-2 text-sm text-neutral-700">
+				<span class="w-2 h-2 rounded-full bg-neutral-900"></span>
+				<span class="font-medium">Categories</span>
+			</div>
+			<a
+				href="/blog"
+				class="text-sm underline font-medium text-neutral-800 hover:text-neutral-900"
+			>
+				Explore all entries
+			</a>
+		</div>
+
+		<div class="divide-y divide-neutral-300">
+			<!-- Voyages -->
+			<div
+				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
+			>
+				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
+					Voyages
+				</h3>
+				<a
+					href="/blog/voyages"
+					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
+				>
+					Stories from our regional journeys, cross-cultural
+					exchanges, and the unique ports we’ve explored.
+				</a>
+			</div>
+
+			<!-- Sailing -->
+			<div
+				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
+			>
+				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
+					Sailing
+				</h3>
+				<a
+					href="/blog/sailing"
+					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
+				>
+					Reflections from our time at sea — the joy of sailing, the
+					challenges, and the camaraderie on board.
+				</a>
+			</div>
+
+			<!-- Sustainability -->
+			<div
+				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
+			>
+				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
+					Sustainability
+				</h3>
+				<a
+					href="/blog/sustainability"
+					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
+				>
+					How we’re thinking about conservation, reducing our
+					footprint, and contributing to a more sustainable future.
+				</a>
+			</div>
+		</div>
+	</section>
 </BaseLayout>
