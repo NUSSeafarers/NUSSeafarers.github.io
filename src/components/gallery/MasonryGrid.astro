@@ -1,0 +1,18 @@
+---
+interface Props {
+  images: string[];
+}
+const { images } = Astro.props;
+---
+
+<section class="columns-1 sm:columns-2 md:columns-4 gap-2 space-y-2">
+  {images.map((src) => (
+    <img
+      src={src}
+      alt="Gallery image"
+      loading="lazy"
+      class="w-full break-inside-avoid shadow transition-opacity duration-300 opacity-0"
+      onload="this.style.opacity = '1'"
+    />
+  ))}
+</section>

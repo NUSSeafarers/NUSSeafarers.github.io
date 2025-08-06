@@ -1,0 +1,8 @@
+---
+// components/text/Paragraph.astro
+const { children, dropCap = false } = Astro.props;
+---
+
+<p class={`text-[var(--text)] text-lg leading-relaxed mb-6 ${dropCap ? "first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85]" : ""}`}>
+  <slot />
+</p>

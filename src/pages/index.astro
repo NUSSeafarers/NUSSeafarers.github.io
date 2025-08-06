@@ -1,10 +1,28 @@
 ---
+import HeroImg from "../components/HeroImg";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Paragraph from "../components/text/Paragraph.astro";
 ---
 
-<BaseLayout title="Home | NUS Seafarers" description="Welcome to the NUS Seafarers homepage.">
-  <h1 class="text-4xl font-bold text-blue-800 mb-4">Ahoy there! 🧭</h1>
-  <p class="text-lg text-gray-600 font-medium">
-    Welcome aboard the Astro-powered site — now with Satoshi.
-  </p>
+<BaseLayout
+	title="Home | NUS Seafarers"
+	description="Welcome to the NUS Seafarers homepage."
+>
+	<HeroImg
+		background="/images/hero_images/moonrock_lagoon.jpg"
+		title="NUS Seafarers"
+		subtitle="To sail is to live."
+	/>
+
+	<Paragraph dropCap>
+		Lorem Ipsum is simply dummy text of the printing and typesetting
+		industry. Lorem Ipsum has been the industry's standard dummy text ever
+		since the 1500s, when an unknown printer took a galley of type and
+		scrambled it to make a type specimen book. It has survived not only five
+		centuries, but also the leap into electronic typesetting, remaining
+		essentially unchanged. It was popularised in the 1960s with the release
+		of Letraset sheets containing Lorem Ipsum passages, and more recently
+		with desktop publishing software like Aldus PageMaker including versions
+		of Lorem Ipsum.
+	</Paragraph>
 </BaseLayout>
