@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSection from "../../components/HeroSection.astro";
+import BlogSection from "../../components/blogcomponents/BlogSection.astro";
 ---
 
 <BaseLayout title="Blog | NUS Seafarers" description="Showcasing our Travels">
@@ -25,54 +26,32 @@ import HeroSection from "../../components/HeroSection.astro";
 			</a>
 		</div>
 
-		<div class="divide-y divide-neutral-300">
-			<!-- Voyages -->
-			<div
-				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
-			>
-				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
-					Voyages
-				</h3>
-				<a
-					href="/blog/voyages"
-					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
-				>
-					Stories from our regional journeys, cross-cultural
-					exchanges, and the unique ports we’ve explored.
-				</a>
-			</div>
+		<div>
+			<hr class="border-t border-neutral-300" />
 
-			<!-- Sailing -->
-			<div
-				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
-			>
-				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
-					Sailing
-				</h3>
-				<a
-					href="/blog/sailing"
-					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
-				>
-					Reflections from our time at sea — the joy of sailing, the
-					challenges, and the camaraderie on board.
-				</a>
-			</div>
+			<BlogSection
+				title="Voyages"
+				href="/blog/voyages"
+				description="Stories from our regional journeys, cross-cultural exchanges, and the unique ports we’ve explored."
+			/>
 
-			<!-- Sustainability -->
-			<div
-				class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 py-8"
-			>
-				<h3 class="text-2xl font-medium text-neutral-900 min-w-[8rem]">
-					Sustainability
-				</h3>
-				<a
-					href="/blog/sustainability"
-					class="text-xl font-normal text-neutral-700 hover:underline max-w-2xl"
-				>
-					How we’re thinking about conservation, reducing our
-					footprint, and contributing to a more sustainable future.
-				</a>
-			</div>
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="Sailing"
+				href="/blog/sailing"
+				description="Reflections from our time at sea — the joy of sailing, the challenges, and the camaraderie on board."
+			/>
+
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="Sustainability"
+				href="/blog/sustainability"
+				description="How we’re thinking about conservation, reducing our footprint, and contributing to a more sustainable future."
+			/>
+
+			<hr class="border-t border-neutral-300" />
 		</div>
 	</section>
 </BaseLayout>

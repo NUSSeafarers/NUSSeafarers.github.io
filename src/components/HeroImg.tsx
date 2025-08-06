@@ -23,12 +23,12 @@ const HeroImg = ({ background, title, subtitle }: HeroImgProps) => {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Text Content */}
-      <div className="relative z-10 px-4">
-        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-md">
+      <div className="relative z-10 px-4 text-center text-white">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-2 text-lg md:text-2xl font-medium drop-shadow-sm">
+          <p className="mt-4 text-xl md:text-3xl font-light drop-shadow-md">
             {subtitle}
           </p>
         )}
