@@ -1,0 +1,14 @@
+---
+const { title, subtitle, path } = Astro.props;
+---
+
+<section class="min-h-[80vh] flex flex-col justify-center px-6 sm:px-12 md:px-32">
+  <div class="max-w-5xl">
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium leading-tight text-neutral-900 tracking-tight">
+      {title}
+    </h1>
+    <p class="mt-4 text-xl md:text-2xl text-neutral-600 font-light max-w-3xl">
+      {subtitle}
+    </p>
+  </div>
+</section>
