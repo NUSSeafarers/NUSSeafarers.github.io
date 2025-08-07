@@ -17,7 +17,7 @@ export const navItems = [
     label: "About Us",
     href: "/about",
     children: [
-      // { label: "Our Story", href: "/about/story" },
+      { label: "Our Story", href: "/about/story" },
       { label: "Our Team", href: "/about/team" },
     ],
   },
