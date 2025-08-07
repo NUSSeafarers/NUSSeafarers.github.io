@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 import Logo from "../Logo";
-
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Blog", href: "/blog" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "About", href: "/about" }
-];
+import { navItems } from "../../data/navItems";
+import InlineNav from "./InlineNav";
+import SocialsBar from "./SocialsBar";
 
 const Footer = () => {
   const [currentPath, setCurrentPath] = useState("/");
@@ -42,18 +38,7 @@ const Footer = () => {
               For any enquiry about future events, drop us a message at any of our social media or through the NUS Seafarers e-mail.
             </p>
 
-            <nav className="flex gap-4 text-lg text-gray-300">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={`hover:underline ${currentPath === item.href ? "font-semibold text-white" : ""
-                    }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
+            <InlineNav navItems={navItems} currentPath={currentPath} />
 
             <p className="mt-6 text-md text-gray-500">
               Copyright © {new Date().getFullYear()}, NUS Seafarers. All Rights Reserved.
@@ -63,13 +48,8 @@ const Footer = () => {
           {/* Right Section */}
           <div className="flex flex-col items-start md:items-end justify-between">
             <div className="mb-6">
-              <h3 className="text-md font-semibold mb-2">Contact Us</h3>
-              <a
-                href="mailto:youremail@example.com"
-                className="flex items-center gap-2 border border-white px-4 py-2 rounded text-sm hover:bg-white hover:text-black transition"
-              >
-                Email
-              </a>
+              <h3 className="text-right text-md font-semibold mb-2">Contact Us</h3>
+              <SocialsBar />
             </div>
 
             {/* Back to top link */}
