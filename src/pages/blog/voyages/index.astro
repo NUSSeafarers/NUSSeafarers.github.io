@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HeroSection from "../../../components/HeroSection.astro";
+import BlogCard from "../../../components/blogcomponents/BlogCard";
+import { getCollection } from 'astro:content';
+
+const voyages = await getCollection('voyages');
+---
+
+
+<BaseLayout title="Blog | NUS Seafarers" description="Showcasing our Travels">
+	<HeroSection
+		title="Voyages across Southeast Asia."
+		subtitle="Stories of adventure, discovery, and cultural exchange from our regional travels."
+		path="voyages"
+	/>
+
+	<section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+		<div class="text-3xl md:text-4xl lg:text-5xl pb-8">Latest Voyages</div>
+
+
+		{/* Render BlogCards here */}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+			{voyages.map((post) => (
+				<BlogCard
+					slug={`voyages/${post.slug}`}
+					thumbnail={post.data.coverImage ?? "/fallback.jpg"}
+					title={post.data.title}
+					summary={post.data.description}
+				/>
+			))}
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+---
+
+<BaseLayout
+  title="404 Not Found | NUS Seafarers"
+  description="Oops! This page got lost at sea."
+>
+  <section
+    class="w-full px-6 sm:px-12 md:px-32 min-h-screen flex flex-col justify-center items-center text-center"
+  >
+    <HeroSection
+      title="404 - Page Not Found"
+      subtitle="Looks like this page drifted away with the tide. Let's navigate back to safer shores."
+      path="voyages"
+    />
+    <a
+      href="/"
+      class="inline-block px-6 py-3 bg-blue-950 text-white rounded-lg hover:bg-blue-900 transition"
+    >
+      Return to Home
+    </a>
+
+    <div class="mt-12 text-sm text-gray-500 italic">
+      Or drop us a message in a bottle if you think something's broken.
+    </div>
+  </section>
+</BaseLayout>

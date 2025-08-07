@@ -1,0 +1,65 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import type { APIContext } from "astro";
+
+// 1. Static paths: build one page per Markdown file
+export async function getStaticPaths() {
+  const posts = await getCollection("voyages");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+// 2. Load content for each individual page
+const { slug } = Astro.params;
+const entry = await getEntry("voyages", slug);
+
+if (!entry) {
+  return new Response(null, { status: 404 });
+}
+
+const { Content } = await entry.render();
+const { title, date, description, author, coverImage, category } = entry.data;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+    <div class="max-w-3xl mx-auto">
+
+      {coverImage && (
+        <img
+          src={coverImage}
+          alt={`Cover image for ${title}`}
+          class="rounded-sm shadow-sm mt-8 w-full object-cover"
+        />
+      )}
+
+      <article
+        class="prose prose-neutral prose-xl max-w-none
+    [&_p]:text-lg [&_p]:text-neutral-800 [&_p]:leading-8 [&_p]:my-5
+    [&_h1]:text-4xl [&_h1]:font-semibold [&_h1]:text-neutral-900 [&_h1]:mt-10 [&_h1]:mb-6
+    [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:text-neutral-900 [&_h2]:mt-12 [&_h2]:mb-5
+    [&_blockquote]:text-3xl [&_blockquote]:font-bold [&_blockquote]:italic [&_blockquote]:text-slate-700 [&_blockquote]:my-8
+    [&_blockquote+p]:text-md [&_blockquote+p]:text-gray-500
+    [&_img]:shadow-sm
+    [&_figure_figcaption]:text-sm [&_figure_figcaption]:text-gray-500 [&_figure_figcaption]:text-center
+    [&_strong]:font-semibold"
+      >
+        <Content />
+      </article>
+
+      <p class="text-lg text-blue-900 text-left font-medium pt-8 mb-8">
+        Published on{" "}
+        {
+          date.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }{" "}
+        by {author}
+      </p>
+    </div>
+  </section>
+</BaseLayout>
