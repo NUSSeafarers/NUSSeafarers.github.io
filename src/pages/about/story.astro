@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+---
+
+<BaseLayout title="About | NUS Seafarers" description="Learn about our mission and story.">
+  <HeroSection
+    title="Sail into something new."
+    subtitle="NUS Seafarers is your campus gateway to the sea — where curiosity meets the coastline."
+    path="about"
+  />
+
+  <section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+    <div class="text-3xl md:text-4xl lg:text-5xl pb-8">Our Story</div>
+
+    <hr class="border-t border-neutral-300" />
+
+    <div class="text-lg leading-relaxed text-[var(--text)] space-y-6 max-w-4xl pt-4">
+      <p>
+        Ever looked at the ocean and thought: <em>“What if I just… sailed away?”</em>  
+        Well, now you kind of can.
+      </p>
+
+      <p>
+        NUS Seafarers is a student-led initiative at the National University of Singapore —
+        your ticket to exploration, curiosity, and coastal adventure.
+      </p>
+
+      <p>
+        From <strong>fun sails and island trips</strong> to <strong>coastal cleanups</strong> and
+        <strong>boat-building workshops</strong>, we create experiences that go beyond the classroom.
+        Whether you're chasing sunsets or rethinking sustainability, we invite you to hop aboard.
+      </p>
+
+      <ul class="list-disc list-inside text-base space-y-1">
+        <li>⚓️ Fun sails & island trips</li>
+        <li>♻️ Coastal cleanups & sustainability missions</li>
+        <li>🧭 Workshops on sailing & boat building</li>
+        <li>🌅 Chill sunset hangouts by the sea</li>
+      </ul>
+
+      <div class="space-y-2 mt-6">
+        <p>
+          📌 Hop aboard:
+        </p>
+        <p>
+          👉 Follow us on Instagram for sea-nic pics:<br />
+          <a href="https://www.instagram.com/nus.seafarers.official/" target="_blank" class="underline text-blue-700 hover:text-blue-900">
+            @nus.seafarers.official
+          </a>
+        </p>
+        <p>
+          👉 Join our Telegram channel to stay in the loop:<br />
+          <a href="https://t.me/nusseafarers" target="_blank" class="underline text-blue-700 hover:text-blue-900">
+            https://t.me/nusseafarers
+          </a>
+        </p>
+      </div>
+
+      <p class="pt-6">
+        PLUS! We’ll have a booth at SLF — swing by to grab some cute souvenirs while you’re at it.  
+        Come say hi, we’d love to meet you! ☀️⚓️
+      </p>
+
+      <a
+        href="/about/team"
+        class="inline-block mt-8 px-5 py-3 rounded-md text-white bg-neutral-900 hover:bg-neutral-800 transition font-medium text-sm"
+      >
+        Meet the Team →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

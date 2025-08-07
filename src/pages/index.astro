@@ -1,0 +1,59 @@
+---
+import HeroImg from "../components/HeroImg";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Paragraph from "../components/text/Paragraph.astro";
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
+import NewsCard from "../components/newscomponents/NewsCard";
+---
+
+<BaseLayout
+  title="Home | NUS Seafarers"
+  description="Welcome to the NUS Seafarers homepage."
+>
+  <HeroImg
+    background="/images/hero_images/moonrock_lagoon.jpg"
+    title="NUS Seafarers"
+    subtitle="To sail is to live."
+  />
+
+  <section class="w-full px-6 sm:px-12 md:px-32 p-20">
+    <div class="text-3xl md:text-4xl lg:text-5xl pb-8">Who are we?</div>
+    <Paragraph>
+      The NUS Seafarers is an initiative by the{" "}
+      <a
+        href="https://nus.edu.sg/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-blue-700 hover:text-blue-900 hover:underline transition-colors duration-300"
+      >
+        National University of Singapore
+      </a>
+      , and has organised{" "}
+      <strong>19 seafaring voyages</strong> since January 2017—spanning{" "}
+      <strong>204 days at sea</strong> with{" "}
+      <strong>193 students and 30 alumni</strong> on board.
+    </Paragraph>
+
+    <Paragraph>
+      These voyages offer participants unique experiences, immersing them in the
+      culture, nature, economy, and maritime infrastructure of{" "}
+      <strong>Indonesia, Thailand, and the Philippines</strong>. Along the way,
+      they become veritable seafarers, guided and enriched by the experience and
+      advice of the participating alumni.
+    </Paragraph>
+
+    <YouTubeEmbed videoId="xjpVuoEg3Wk" />
+  </section>
+  <section class="w-full px-6 sm:px-12 md:px-32 p-20">
+    <div class="text-center text-3xl md:text-4xl lg:text-5xl pb-8">
+      The latest from NUS Seafarers
+    </div>
+    <div class="flex justify-center py-20">
+      <NewsCard
+        title="NUS Seafarers"
+        imageSrc="/images/news/nusseafarers_poster1.jpg"
+        href="/"
+      />
+    </div>
+  </section>
+</BaseLayout>

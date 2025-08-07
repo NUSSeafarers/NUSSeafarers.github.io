@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import BlogSection from "../../components/blogcomponents/BlogSection.astro";
+---
+
+<BaseLayout title="Blog | NUS Seafarers" description="Showcasing our Travels">
+	<HeroSection
+		title="Charting our journeys across oceans and ideas."
+		subtitle="Stories from our voyages, our love for sailing, and our thoughts on building a more sustainable future."
+		path="blog"
+	/>
+
+	<section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+		<div class="text-3xl md:text-4xl lg:text-5xl pb-8">What we do</div>
+		<div class="flex justify-between items-center mb-8">
+			<div class="flex items-center gap-2 text-sm text-neutral-700">
+				<span class="w-2 h-2 rounded-full bg-neutral-900"></span>
+				<span class="font-medium">Categories</span>
+			</div>
+			<a
+				href="/blog"
+				class="text-sm underline font-medium text-neutral-800 hover:text-neutral-900"
+			>
+				Explore all entries
+			</a>
+		</div>
+
+		<div>
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="Voyages"
+				href="/blog/voyages"
+				description="Stories from our regional journeys, cross-cultural exchanges, and the unique ports we’ve explored."
+			/>
+
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="Sailing"
+				href="/blog/sailing"
+				description="Reflections from our time at sea — the joy of sailing, the challenges, and the camaraderie on board."
+			/>
+
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="Sustainability"
+				href="/blog/sustainability"
+				description="How we’re thinking about conservation, reducing our footprint, and contributing to a more sustainable future."
+			/>
+
+			<hr class="border-t border-neutral-300" />
+		</div>
+	</section>
+</BaseLayout>

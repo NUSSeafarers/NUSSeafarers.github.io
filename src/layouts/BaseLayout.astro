@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/navbarcomponents/Navbar";
+import Footer from "../components/footercomponents/Footer";
+
+const {
+  title = "NUS Seafarers",
+  description = "Exploring the seas of knowledge.",
+} = Astro.props;
+const { default: children } = Astro.slots;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-white text-gray-900 font-sans antialiased"
+  >
+    <Navbar client:load />
+
+    <main class="flex-grow p-2">
+      <slot />
+    </main>
+
+    <Footer client:load />
+  </body>
+</html>

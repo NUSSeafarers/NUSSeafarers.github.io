@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import TeamMember from "../../components/teamcomponents/TeamMember";
+---
+
+<BaseLayout
+	title="Our Team | NUS Seafarers"
+	description="Meet the people behind the voyages."
+>
+	<HeroSection
+		title="Meet the Crew"
+		subtitle="The people who chart the course, guide the sails, and shape the spirit of our journeys."
+		path="about"
+	/>
+
+	<section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+		<div class="text-3xl md:text-4xl lg:text-5xl pb-12 mb-12">Our Team</div>
+
+		<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+			<!-- Team Member 1 -->
+			<TeamMember
+				name="Nigel Teo"
+				role="Website Developer"
+				image="/images/team/nigel_profile.jpg"
+				bio="Loves the sea and building cool things for the Seafarers community."
+			/>
+
+			<!-- <TeamMember
+				name="Nigel Teo"
+				role="Website Developer"
+				image="/images/team/nigel_profile.jpg"
+				bio="Loves the sea and building cool things for the Seafarers community."
+			/>
+
+			<TeamMember
+				name="Nigel Teo"
+				role="Website Developer"
+				image="/images/team/nigel_profile.jpg"
+				bio="Loves the sea and building cool things for the Seafarers community."
+			/> -->
+
+			<!-- Add more team members below as needed -->
+		</div>
+	</section>
+</BaseLayout>
