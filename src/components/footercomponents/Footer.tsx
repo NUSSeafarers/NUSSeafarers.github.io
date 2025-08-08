@@ -35,20 +35,19 @@ const Footer = () => {
             </h2>
 
             <p className="text-lg text-gray-300 mb-4 max-w-md">
-              For any enquiry about future events, drop us a message at any of our social media or through the NUS Seafarers e-mail.
+              For any enquiry about future events, drop us a message at any of
+              our social media or through the NUS Seafarers e-mail.
             </p>
 
             <InlineNav navItems={navItems} currentPath={currentPath} />
-
-            <p className="mt-6 text-md text-gray-500">
-              Copyright © {new Date().getFullYear()}, NUS Seafarers. All Rights Reserved.
-            </p>
           </div>
 
           {/* Right Section */}
           <div className="flex flex-col items-start md:items-end justify-between">
             <div className="mb-6">
-              <h3 className="text-right text-md font-semibold mb-2">Contact Us</h3>
+              <h3 className="text-right text-md font-semibold mb-2">
+                Contact Us
+              </h3>
               <SocialsBar />
             </div>
 
@@ -59,8 +58,12 @@ const Footer = () => {
             >
               Back to top
             </a>
-
           </div>
+
+          <p className="mt-6 text-md text-gray-500">
+            Copyright © {new Date().getFullYear()}, NUS Seafarers. All Rights
+            Reserved.
+          </p>
         </div>
       </footer>
     </div>

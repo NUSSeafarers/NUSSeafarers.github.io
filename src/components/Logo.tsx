@@ -1,15 +1,15 @@
 // components/Logo.tsx
 
 interface LogoProps {
-  size?: number; // size in pixels, default is 32
-  className?: string; // optional Tailwind or custom classes
+  size?: number; 
+  className?: string; 
   alt?: string;
 }
 
 const Logo = ({ size = 32, className = "", alt = "NUS Seafarers Logo" }: LogoProps) => {
   return (
     <img
-      src="/images/misc/favicon.png"
+      src="/images/misc/favicon.svg"
       alt={alt}
       width={size}
       height={size}
