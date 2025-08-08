@@ -1,11 +1,13 @@
 ---
-title: "June Anambas Voyage 2025"
+title: "Anambas Voyage June 2025"
 description: "A voyage across the South China Sea — through storms, sea urchins, moonlit lagoons, and lessons only the ocean can teach."
 date: 2025-06-18
 author: "Yanjia"
 coverImage: "/images/voyages/2025-06-june-anambas-voyage/moonrock_lagoon.jpg"
 category: "Anambas Voyage"
 ---
+
+# Anambas Voyage June 2025
 
 On the morning of 6 June 2025, nine voyagers cast off from the edge of Singapore, en route toward the Anambas Islands, 180 nautical miles Northeast of Singapore, a hidden constellation of paradise adrift in the South China Sea.
 

@@ -64,5 +64,17 @@ export const voyageImages = [
   "/images/voyages/2025-01-badas-riau/pulau_pinang_seribu.jpg",
   "/images/voyages/2025-01-badas-riau/pulau_sebangka.jpg",
   "/images/voyages/2025-01-badas-riau/pulau_senayang.jpg",
-  "/images/voyages/2025-01-badas-riau/ship_boom.jpg"
+  "/images/voyages/2025-01-badas-riau/ship_boom.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/2_guys_on_mast.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/2_on_belay.JPG",
+  "/images/voyages/2025-06-june-anambas-voyage/2_sailing_boat.JPG",
+  "/images/voyages/2025-06-june-anambas-voyage/3_girls_chilling_boat.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/all_on_speedboat.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/cabin_time.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/dinnertime.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/dinnertime_2.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/kayaking.JPG",
+  "/images/voyages/2025-06-june-anambas-voyage/moonrock_lagoon.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/purple_skies.jpg",
+  "/images/voyages/2025-06-june-anambas-voyage/waterfall_group.jpg"
 ];
