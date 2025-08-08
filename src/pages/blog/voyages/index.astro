@@ -4,7 +4,9 @@ import HeroSection from "../../../components/HeroSection.astro";
 import BlogCard from "../../../components/blogcomponents/BlogCard";
 import { getCollection } from 'astro:content';
 
-const voyages = await getCollection('voyages');
+const voyages = (await getCollection('voyages')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 ---
 
 
