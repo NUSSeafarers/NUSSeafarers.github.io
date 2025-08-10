@@ -3,35 +3,179 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSection from "../../components/HeroSection.astro";
 ---
 
-<BaseLayout title="About | NUS Seafarers" description="Learn about our mission and crew.">
+<BaseLayout
+  title="About | NUS Seafarers"
+  description="Learn about our mission and crew."
+>
   <HeroSection
-    title="Sailing with purpose."
-    subtitle="We believe in learning through exploration — across seas, cultures, and sustainability frontiers."
+    title="Anchored in heritage, sailing toward a sustainable future."
+    subtitle="Born from voyages aboard Four Friends, we unite people through adventure, community, and care for the sea — keeping maritime traditions alive while charting a course for a greener tomorrow."
     path="about"
   />
 
   <section class="w-full px-6 sm:px-12 md:px-32 pb-24">
-    <div class="text-3xl md:text-4xl lg:text-5xl pb-8">Who we are</div>
+    <div
+      class="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-16 items-start max-w-5xl mx-auto pb-16"
+    >
+      <!-- Left rail -->
+      <aside class="flex flex-col gap-6">
+        <div class="text-xl lg:text-2xl text-neutral-500">Our Story</div>
+      </aside>
 
-    <div class="text-lg leading-relaxed text-[var(--text)] space-y-6 max-w-4xl">
-      <p>
-        The NUS Seafarers is a student-led initiative from the National University of Singapore, created to foster regional understanding through seafaring voyages. Since 2017, we’ve embarked on <strong>19 voyages</strong> with <strong>over 200 participants</strong>, visiting ports across Southeast Asia to learn from local communities, marine landscapes, and each other.
-      </p>
+      <!-- Right content -->
+      <div class="space-y-8">
+        <h2
+          class="text-3xl sm:text-3xl lg:text-4xl leading-tight font-medium text-neutral-700"
+        >
+          NUS Seafarers began with sailing voyages aboard Four Friends, a 60
+          foot gaff-rigged schooner. These early trips were about bringing
+          experiential sailing voyages to students.
+        </h2>
+      </div>
+    </div>
 
-      <p>
-        Our voyages focus on cultural immersion, environmental reflection, and the philosophy that learning should be grounded in experience. As we sail through the archipelagos, we explore questions of sustainability, heritage, and our shared maritime future.
-      </p>
+    <div
+      class="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-16 items-start max-w-5xl mx-auto"
+    >
+      <!-- Left rail -->
+      <aside class="flex flex-col gap-6"></aside>
 
-      <p>
-        We’re more than just a group that sails — we’re a community of learners, educators, sailors, and dreamers.
-      </p>
+      <!-- Right content -->
+      <div class="space-y-8">
+        <img
+          src="/images/about/our_story_1.jpg"
+          alt="North with the Trade Winds"
+          class="rounded-lg shadow-sm w-full object-cover"
+        />
 
-      <a
-        href="/about/team"
-        class="inline-block mt-6 px-5 py-3 rounded-md text-white bg-neutral-900 hover:bg-neutral-800 transition font-medium text-sm"
-      >
-        Meet the Team →
-      </a>
+        <!-- Optional supporting copy -->
+        <h2
+          class="text-neutral-900 font-semibold text-md max-w-3xl leading-tight"
+        >
+          Driven by the spirit of adventure, exploring the unique cultural and
+          economic heritage of maritime Southeast Asia and complex ecology of
+          Singapore waters.
+        </h2>
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          NUS Seafarers became an official student club in 2025, fully
+          student-run. We realised that sailing could be more than just
+          adventure; it could be a platform for sustainability, community, and
+          heritage. Today, it is a platform to bring together people from all
+          backgrounds to learn to sail, join coastal cleanups, share maritime
+          stories, and connect with the ocean in meaningful ways.
+        </p>
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          From our first days on Four Friends to our diverse activities now, our
+          aim has stayed the same: to enjoy the sea, care for it, and keep its
+          stories alive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full px-6 sm:px-12 md:px-32 pb-24">
+    <div
+      class="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-16 items-start max-w-5xl mx-auto pb-16"
+    >
+      <!-- Left rail -->
+      <aside class="flex flex-col gap-6">
+        <div class="text-xl lg:text-2xl text-neutral-500">Our Mission</div>
+      </aside>
+
+      <!-- Right content -->
+      <div class="space-y-8">
+        <h2
+          class="text-3xl sm:text-3xl lg:text-4xl leading-tight font-medium text-neutral-700"
+        >
+          NUS Seafarers began with a simple idea: that the sea should be for
+          everyone - open, welcoming, and cared for.
+        </h2>
+      </div>
+    </div>
+
+    <div
+      class="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-16 items-start max-w-5xl mx-auto"
+    >
+      <!-- Left rail -->
+      <aside class="flex flex-col gap-6"></aside>
+
+      <!-- Right content -->
+      <div class="space-y-8">
+        <img
+          src="/images/sailing/weekend_race_series_1_2025/racing_boat.png"
+          alt="North with the Trade Winds"
+          class="rounded-lg shadow-sm w-full object-cover"
+        />
+
+        <!-- Optional supporting copy -->
+        <h2
+          class="text-neutral-900 font-semibold text-md max-w-3xl leading-tight"
+        >
+          From our home waters in Singapore to distant shores beyond, we set out
+          to build a community bound not by uniform skill or background, but by
+          a shared respect for the ocean and an appetite to explore them.
+        </h2>
+
+        <img
+          src="/images/about/ketam_cleanup.jpg"
+          alt="North with the Trade Winds"
+          class="rounded-lg shadow-sm w-full object-cover"
+        />
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          Our mission is threefold. First, we champion sustainable seafaring,
+          recognising our role as stewards of fragile marine ecosystems. From
+          coastal cleanups at Pulau Ketam to workshops on marine life and
+          upcycling, we equip our members with the knowledge and practices
+          needed to protect the seas for generations to come.
+        </p>
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          Second, we aim to build an inclusive community of seafarers, a place
+          where beginners can take their first tack alongside seasoned sailors,
+          and where curiosity and camaraderie fuel every voyage. Whether it’s a
+          leisurely cruise, a regatta, or a weekend dinghy sail, there’s a place
+          on deck for everyone.
+        </p>
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          Third, we are dedicated to sharing stories and preserving maritime
+          heritage. The sea is not only our playground but our library of living
+          history. Through oral history projects, digitalising personal
+          recounts, photos and videos on our website, we capture the unique
+          experiences of each voyage, keeping alive Singapore’s rich seafaring
+          traditions and passing them on to future generations.
+        </p>
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          Our activities span sailing courses and expeditions, environmental
+          initiatives, and cultural preservation projects. From mastering the
+          physics of sailing to embarking on long-haul voyages to creating an
+          archive of maritime stories that transcends time and borders, we sail
+          with purpose.
+        </p>
+
+        <img
+          src="/images/about/christmas_party_2024.jpg"
+          alt="North with the Trade Winds"
+          class="rounded-lg shadow-sm w-full object-cover"
+        />
+
+        <p class="text-neutral-600 text-md max-w-2xl mt-6">
+          At NUS Seafarers, every tack, every cleanup, every tale told brings us
+          closer to a single vision: a greener, more connected, and enduring
+          maritime culture in Singapore championed by youths, anchored in
+          respect for the sea, and driven by the spirit of adventure.
+        </p>
+        <a
+          href="/about/team"
+          class="justify-self-start inline-flex items-center px-5 py-3 mt-6 rounded-md text-white bg-neutral-900 hover:bg-neutral-800 transition font-medium text-sm"
+        >
+          Meet the Team →
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
