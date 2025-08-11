@@ -1,6 +1,6 @@
 ---
 title: "Sailing the South Seas"
-description: "From Kuching to the Anambas Archipelago and Batam"
+description: "From Kuching to the Anambas Archipelago and Batam."
 date: 2024-05-25
 author: "Syam Farhan"
 coverImage: "/images/voyages/2024-05-sailing-the-south-seas/lighthouse_group.png"
