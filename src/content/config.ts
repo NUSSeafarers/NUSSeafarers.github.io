@@ -11,9 +11,10 @@ const baseSchema = z.object({
 
 const voyages = defineCollection({ schema: baseSchema });
 const sailing = defineCollection({ schema: baseSchema });
-const news = defineCollection({ schema: baseSchema }); // ✅ explicitly add this
+const sustainability = defineCollection({ schema: baseSchema }); 
 
 export const collections = {
   voyages,
   sailing,
+  sustainability,
 };
