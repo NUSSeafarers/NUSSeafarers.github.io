@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSection from "../../../components/HeroSection.astro";
-import BlogCard from "../../../components/blogcomponents/BlogCard";
+import BlogCard from "../../../components/blog/BlogCard";
 import { getCollection } from 'astro:content';
 
 const sailing = (await getCollection('sustainability')).sort(
@@ -15,7 +15,7 @@ const sailing = (await getCollection('sustainability')).sort(
 >
   <HeroSection
     title="Sustainability at sea and ashore."
-    subtitle="Thoughts on conservation, climate action, and responsible exploration."
+    subtitle="How we’re thinking about conservation, reducing our footprint, and contributing to a more sustainable future."
     path="sustainability"
   />
 
