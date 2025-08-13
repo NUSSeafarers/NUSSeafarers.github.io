@@ -7,6 +7,7 @@ export const navItems = [
       { label: "Voyages", href: "/blog/voyages" },
       { label: "Sailing", href: "/blog/sailing" },
       { label: "Sustainability", href: "/blog/sustainability" },
+      { label: "The Captain's Stories", href: "/blog/captains-stories" },
     ],
   },
   {
