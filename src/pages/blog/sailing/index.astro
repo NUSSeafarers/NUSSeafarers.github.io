@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HeroSection from "../../../components/HeroSection.astro";
-import BlogCard from "../../../components/blogcomponents/BlogCard";
+import BlogCard from "../../../components/blog/BlogCard";
 import { getCollection } from 'astro:content';
 
 const sailing = (await getCollection('sailing')).sort(
@@ -13,7 +13,7 @@ const sailing = (await getCollection('sailing')).sort(
 <BaseLayout title="Sailing | NUS Seafarers" description="In Our Element!">
   <HeroSection
     title="Sailing with purpose."
-    subtitle="Reflections from our time at sea, from calm waters to stormy horizons."
+    subtitle="Reflections from our time at sea — the joy of sailing, the challenges, and the camaraderie on board."
     path="sailing"
   />
 

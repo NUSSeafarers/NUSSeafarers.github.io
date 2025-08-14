@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroSection from "../../components/HeroSection.astro";
-import BlogSection from "../../components/blogcomponents/BlogSection.astro";
+import BlogSection from "../../components/blog/BlogSection.astro";
 ---
 
 <BaseLayout title="Blog | NUS Seafarers" description="Showcasing our Travels">
@@ -49,6 +49,14 @@ import BlogSection from "../../components/blogcomponents/BlogSection.astro";
 				title="Sustainability"
 				href="/blog/sustainability"
 				description="How we’re thinking about conservation, reducing our footprint, and contributing to a more sustainable future."
+			/>
+
+			<hr class="border-t border-neutral-300" />
+
+			<BlogSection
+				title="The Captain's Stories"
+				href="/blog/captains-stories"
+				description="Straight from the captain’s log… and sometimes his imagination."
 			/>
 
 			<hr class="border-t border-neutral-300" />
