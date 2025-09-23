@@ -18,7 +18,7 @@ export default function NavMenu() {
               key={item.href}
               name={item.label}
               href={item.href}
-              children={item.children}
+              subItems={item.children} // renamed prop
             />
           ))}
         </ul>

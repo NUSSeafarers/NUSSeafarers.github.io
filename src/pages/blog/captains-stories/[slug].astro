@@ -1,7 +1,6 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import type { APIContext } from "astro";
 
 // 1. Static paths: build one page per Markdown file
 export async function getStaticPaths() {
@@ -20,7 +19,7 @@ if (!entry) {
 }
 
 const { Content } = await entry.render();
-const { title, date, description, author, coverImage, category } = entry.data;
+const { title, date, description, author, coverImage } = entry.data;
 ---
 
 <BaseLayout title={title} description={description}>
