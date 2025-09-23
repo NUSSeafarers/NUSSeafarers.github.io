@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # Bun (fast) — switch to setup-node if you prefer pnpm/npm
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.x
+
+      - name: Install deps (lockfile required)
+        run: bun install --frozen-lockfile
+
+      # Static checks
+      - name: Lint
+        run: bun run lint
+
+      - name: Type check
+        run: bun run typecheck
+
+      - name: Astro check (content collections, MDX, etc.)
+        run: bunx astro check
+
+      # Build once during CI to catch prod-only issues
+      - name: Build
+        run: bun run build

@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
+type SubItem = { label: string; href: string };
+
 type NavButtonProps = {
   name: string;
   href: string;
-  children?: { label: string; href: string }[];
+  subItems?: SubItem[];
 };
 
-const NavButton = ({ name, href, children = [] }: NavButtonProps) => {
+const NavButton = ({ name, href, subItems = [] }: NavButtonProps) => {
   const [currentPath, setCurrentPath] = useState("/");
 
   useEffect(() => {
@@ -16,7 +18,7 @@ const NavButton = ({ name, href, children = [] }: NavButtonProps) => {
   }, []);
 
   const isActive = currentPath === href;
-  const hasDropdown = children.length > 0;
+  const hasDropdown = subItems.length > 0;
 
   return (
     <li className="relative group">
@@ -32,10 +34,9 @@ const NavButton = ({ name, href, children = [] }: NavButtonProps) => {
         />
       </a>
 
-      {/* ⬇ Dropdown inside same <li> so hover still works */}
       {hasDropdown && (
         <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-max min-w-max bg-white shadow-lg rounded-md p-2 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 space-y-2 text-sm text-neutral-900 z-50">
-          {children.map((child) => (
+          {subItems.map((child) => (
             <li key={child.href}>
               <a
                 href={child.href}
