@@ -34,6 +34,18 @@ const { title, date, description, author, coverImage } = entry.data;
         />
       )}
 
+      <p class="text-lg text-blue-900 text-left font-medium pt-8 mb-8">
+        Published on{" "}
+        {
+          date.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }{" "}
+        by {author}
+      </p>
+
       <article
         class="prose prose-neutral prose-xl max-w-none
     [&_p]:text-lg [&_p]:text-neutral-800 [&_p]:leading-8 [&_p]:my-5
@@ -48,17 +60,6 @@ const { title, date, description, author, coverImage } = entry.data;
         <Content />
       </article>
 
-      <p class="text-lg text-blue-900 text-left font-medium pt-8 mb-8">
-        Published on{" "}
-        {
-          date.toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })
-        }{" "}
-        by {author}
-      </p>
     </div>
   </section>
 </BaseLayout>
