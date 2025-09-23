@@ -1,9 +1,11 @@
 ---
 const { title, subtitle } = Astro.props;
+
+import { fade } from "astro:transitions";
 ---
 
 <section class="min-h-[60vh] flex flex-col justify-center px-6 sm:px-12 md:px-32">
-  <div class="max-w-5xl">
+  <div transition:animate={fade({ duration: "0.4s" })}  class="max-w-5xl">
     <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium leading-tight text-neutral-900 tracking-tight">
       {title}
     </h1>
