@@ -6,9 +6,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --ext .ts,.tsx,.astro",
+    "typecheck": "tsc --noEmit",
+    "astro:check": "astro check"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/react": "4.3.1",
     "@astrojs/sitemap": "3.6.0",
     "@tailwindcss/vite": "^4.1.11",
@@ -24,6 +28,14 @@
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
-    "typescript": "^5.8.3"
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
+    "astro-eslint-parser": "^1.2.2",
+    "eslint": "^9.36.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.4.0",
+    "typescript": "^5.9.2"
   }
 }
