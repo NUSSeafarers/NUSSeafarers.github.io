@@ -6,7 +6,7 @@ import {
 import { FaTelegramPlane } from "react-icons/fa"; 
 
 const socials = [
-  { href: "mailto:you@example.com", icon: Mail },
+  { href: "mailto:nusseafarers@u.nus.edu", icon: Mail },
   { href: "https://www.youtube.com/@nusseafarers4547", icon: Youtube },
   { href: "https://t.me/nusseafarers", icon: FaTelegramPlane },
   { href: "https://www.instagram.com/nus.seafarers.official/", icon: Instagram },

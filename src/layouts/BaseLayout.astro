@@ -3,6 +3,8 @@ import "../styles/global.css";
 import Navbar from "../components/navbar/Navbar"
 import Footer from "../components/footer/Footer";
 
+import { ClientRouter } from "astro:transitions";
+
 const {
   title = "NUS Seafarers",
   description = "Exploring the seas of knowledge.",
@@ -22,6 +24,8 @@ const {
       href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
       rel="stylesheet"
     />
+
+    <ClientRouter />
   </head>
   <body
     class="min-h-screen flex flex-col bg-white text-gray-900 font-sans antialiased"
