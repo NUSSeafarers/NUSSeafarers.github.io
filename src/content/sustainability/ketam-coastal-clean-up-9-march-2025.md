@@ -5,6 +5,8 @@ date: 2025-03-14
 author: "Yan Jia"
 coverImage: "/images/sustainability/ketam-coastal-clean-up-9-march-2025/ketam_group.webp" 
 category: "Ketam Clean-Up"
+lat: 1.4027
+lng: 103.9514
 ---
 
 # CSC Ketam Coastal Clean-Up – 9 March 2025

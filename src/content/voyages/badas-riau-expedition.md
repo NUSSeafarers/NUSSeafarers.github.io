@@ -5,6 +5,8 @@ date: 2025-01-02
 author: "Lewis"
 coverImage: "/images/voyages/2025-01-badas-riau/pulau_sebangka.jpg" 
 category: "Riau Voyage"
+lat: 0.5827
+lng: 107.1322
 ---
 
 # Badas-Riau Expedition

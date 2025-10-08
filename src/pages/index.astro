@@ -4,7 +4,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Paragraph from "../components/text/Paragraph.astro";
 import YouTubeEmbed from "../components/YouTubeEmbed.astro";
 import NewsCard from "../components/news/NewsCard";
-import SeafarerHistoryMap from "../components/map/SeafarerHistoryMap";
+import SeafarerHistoryMap, { type VisitInput} from "../components/map/SeafarerHistoryMap";
+
+import { getCollection } from 'astro:content';
+
+const sustainability = await getCollection("sustainability");
+const voyages = await getCollection("voyages");
+
+type EntryWithCoords = { data: { lat?: number; lng?: number; title: string } };
+
+function extractVisits(entries: ReadonlyArray<EntryWithCoords>): VisitInput[] {
+  return entries
+    .filter(({ data }) => Number.isFinite(data.lat) && Number.isFinite(data.lng))
+    .map(({ data }) => ({ lat: data.lat, lng: data.lng, title: data.title }));
+}
+
+const sustainabilityVisits = extractVisits(sustainability);
+const voyageVisits = extractVisits(voyages);
+
+// Merge into one array
+const visits: VisitInput[] = [...sustainabilityVisits, ...voyageVisits];
 ---
 
 <BaseLayout
@@ -50,7 +69,7 @@ import SeafarerHistoryMap from "../components/map/SeafarerHistoryMap";
       Trail of the Seafarers.
     </div>
     <div class="flex justify-center py-10">
-      <SeafarerHistoryMap client:only="react" />
+      <SeafarerHistoryMap client:only="react" visits={visits} />
     </div>
   </section>
   <section class="w-full px-6 sm:px-12 md:px-32 p-20">
