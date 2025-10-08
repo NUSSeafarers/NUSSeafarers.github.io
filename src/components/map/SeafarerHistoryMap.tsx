@@ -1,5 +1,6 @@
 // SeafarerHistoryMap.tsx
 import React, { useMemo } from "react";
+import L from "leaflet";
 import type { LatLngTuple } from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -42,6 +43,14 @@ function normalizeVisit(v: VisitInput): Visit | null {
   return { lat, lng, title: v.title };
 }
 
+const mapPinIcon = new L.Icon({
+  iconUrl: "/images/misc/map-pin-line.svg",
+  iconSize: [32, 32],       // size of the icon in pixels
+  iconAnchor: [16, 32],     // point of the icon which corresponds to marker's location
+  popupAnchor: [0, -32],    // offset of popup relative to iconAnchor
+  className: "map-pin-icon" // optional class for custom styling
+});
+
 const SeafarerHistoryMap: React.FC<SeafarerHistoryMapProps> = ({
   visits,
   zoom = 5,
@@ -73,7 +82,7 @@ const SeafarerHistoryMap: React.FC<SeafarerHistoryMapProps> = ({
           const pos: LatLngTuple = [v.lat, v.lng];
           const key = `${v.lat},${v.lng},${v.title ?? ""},${i}`;
           return (
-            <Marker key={key} position={pos}>
+            <Marker key={key} position={pos} icon={mapPinIcon}>
               <Popup>{v.title ?? `Stop ${i + 1}`}</Popup>
             </Marker>
           );
