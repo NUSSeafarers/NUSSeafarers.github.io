@@ -7,6 +7,8 @@ const baseSchema = z.object({
   author: z.string().optional(),
   coverImage: z.string().optional(),
   category: z.string().optional(),
+  lat: z.number().optional(),
+  lng: z.number().optional(),
 });
 
 const voyages = defineCollection({ schema: baseSchema });

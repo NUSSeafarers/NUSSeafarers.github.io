@@ -4,6 +4,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Paragraph from "../components/text/Paragraph.astro";
 import YouTubeEmbed from "../components/YouTubeEmbed.astro";
 import NewsCard from "../components/news/NewsCard";
+import SeafarerHistoryMap, { type VisitInput} from "../components/map/SeafarerHistoryMap";
+
+import { getCollection } from 'astro:content';
+
+const sustainability = await getCollection("sustainability");
+const voyages = await getCollection("voyages");
+
+type EntryWithCoords = { data: { lat?: number; lng?: number; title: string } };
+
+function extractVisits(entries: ReadonlyArray<EntryWithCoords>): VisitInput[] {
+  return entries
+    .filter(({ data }) => Number.isFinite(data.lat) && Number.isFinite(data.lng))
+    .map(({ data }) => ({ lat: data.lat, lng: data.lng, title: data.title }));
+}
+
+const sustainabilityVisits = extractVisits(sustainability);
+const voyageVisits = extractVisits(voyages);
+
+// Merge into one array
+const visits: VisitInput[] = [...sustainabilityVisits, ...voyageVisits];
 ---
 
 <BaseLayout
@@ -37,12 +57,20 @@ import NewsCard from "../components/news/NewsCard";
     <Paragraph>
       These voyages offer participants unique experiences, immersing them in the
       culture, nature, economy, and maritime infrastructure of{" "}
-      <strong>Malaysia, Indonesia, Thailand, and the Philippines</strong>. Along the way,
-      they become veritable seafarers, guided and enriched by the experience and
-      advice of the participating alumni.
+      <strong>Malaysia, Indonesia, Thailand, and the Philippines</strong>. Along
+      the way, they become veritable seafarers, guided and enriched by the
+      experience and advice of the participating alumni.
     </Paragraph>
 
     <YouTubeEmbed videoId="xjpVuoEg3Wk" />
+  </section>
+  <section class="w-full px-6 sm:px-12 md:px-32 p-20">
+    <div class="text-center text-3xl md:text-4xl lg:text-5xl pb-4">
+      Trail of the Seafarers.
+    </div>
+    <div class="flex justify-center py-10">
+      <SeafarerHistoryMap client:only="react" visits={visits} />
+    </div>
   </section>
   <section class="w-full px-6 sm:px-12 md:px-32 p-20">
     <div class="text-center text-3xl md:text-4xl lg:text-5xl pb-8">

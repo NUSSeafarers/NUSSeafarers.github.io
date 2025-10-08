@@ -5,6 +5,8 @@ date: 2025-06-18
 author: "Yanjia"
 coverImage: "/images/voyages/2025-06-june-anambas-voyage/moonrock_lagoon.jpg"
 category: "Anambas Voyage"
+lat: 3.2211
+lng: 106.2239
 ---
 
 # Anambas Voyage June 2025

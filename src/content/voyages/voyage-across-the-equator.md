@@ -1,10 +1,12 @@
 ---
-title: "Sail to Anambas"
+title: "Voyage Across the Equator"
 description: "Nine NUS students kicked off their new year earlier this month by sailing off on a ship for a week-long voyage across the Equator."
 date: 2017-01-29
 author: "NUS News"
 coverImage: "/images/voyages/2017-01-across-the-equator/map-south-china-sea.jpg"
 category: "Sebanka Voyage"
+lat: 0.14649
+lng: 104.57807
 ---
 
 # Voyage Across the Equator

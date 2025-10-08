@@ -5,6 +5,8 @@ date: 2018-03-12
 author: "Prof Martin Henz and Dr John van Wyhe"
 coverImage: "/images/voyages/2018-02-recess-week-volcano-voyage/student-at-rakata.jpg"
 category: "Krakatoa Voyage"
+lat: -6.1019
+lng: 105.4230
 ---
 
 # Experiencing Krakatoa
